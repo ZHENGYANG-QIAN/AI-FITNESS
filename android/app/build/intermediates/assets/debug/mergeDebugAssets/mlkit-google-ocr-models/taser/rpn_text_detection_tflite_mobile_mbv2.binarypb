@@ -1,0 +1,4 @@
+
+Atype.googleapis.com/google_ocr.PhotoOcrTextDetectionMutatorConfig{
+ TfliteRegionProposalTextDetectorG./detector/region_proposal_text_detector_tflite_vertical_mbv2_v1.bincfg
+./detector (

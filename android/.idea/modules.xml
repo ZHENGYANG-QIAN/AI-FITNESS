@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ML_Kit_Vision_Quickstart.iml" filepath="$PROJECT_DIR$/.idea/modules/ML_Kit_Vision_Quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ML_Kit_Vision_Quickstart.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

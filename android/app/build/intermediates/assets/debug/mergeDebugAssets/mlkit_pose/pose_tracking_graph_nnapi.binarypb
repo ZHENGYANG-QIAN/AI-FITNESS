@@ -1,0 +1,4 @@
+
+ÏPoseTrackingSubgraphNnapiIMAGE:input_frames"NORM_LANDMARKS:pose_landmarks"POSE_PRESENCE:pose_presence*/DETECTOR_MODEL_DELEGATE:detector_model_delegate*1LANDMARKS_MODEL_DELEGATE:landmarks_model_delegate
+@ImagePropertiesCalculatorIMAGE:input_frames"SIZE:image_size
+¤$MLKitValidatePoseLandmarksCalculatorNORM_LANDMARKS:pose_landmarksPOSE_PRESENCE:pose_presenceIMAGE_SIZE:image_size")VALIDATED_LANDMARKS:output_pose_landmarksRinput_frameszoutput_pose_landmarks‚detector_model_delegate‚landmarks_model_delegate

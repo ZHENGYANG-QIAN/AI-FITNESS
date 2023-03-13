@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/drawable-hdpi/ic_switch_camera_white_48dp.xml" value="0.178" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/drawable-xxhdpi/ic_switch_camera_white_48dp.xml" value="0.178" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/drawable-xxxhdpi/ic_switch_camera_white_48dp.xml" value="0.178" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/drawable/list_item_background.xml" value="0.178" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/drawable/logo_mlkit.xml" value="0.178" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_chooser.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_settings.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_still_image.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_vision_camerax_live_preview.xml" value="0.26671732522796354" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_vision_cameraxsource_demo.xml" value="0.15045592705167174" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_vision_entry_choice.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/activity_vision_live_preview.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/settings_style.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/spinner_style.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/layout/toggle_style.xml" value="0.14944275582573455" />
+        <entry key="..\:/AI learning/mlkit/android/vision-quickstart/app/src/main/res/menu/camera_button_menu.xml" value="0.28703703703703703" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,7 @@
+
+IColorConvertCalculatorRGB_IN:input_frames"RGBA_OUT:input_frames_rgba
+FImageFrameToGpuBufferCalculatorinput_frames_rgba"input_frames_gpu
+ZGlScalerCalculatorVIDEO:input_frames_gpu""VIDEO:input_frames_gpu_y_corrected:²éÔú 
+ÝPoseTrackingGpuSubgraph"IMAGE:input_frames_gpu_y_corrected"NORM_LANDMARKS:pose_landmarks"POSE_PRESENCE:pose_presence*/DETECTOR_MODEL_DELEGATE:detector_model_delegate*1LANDMARKS_MODEL_DELEGATE:landmarks_model_delegate
+@ImagePropertiesCalculatorIMAGE:input_frames"SIZE:image_size
+¤$MLKitValidatePoseLandmarksCalculatorNORM_LANDMARKS:pose_landmarksPOSE_PRESENCE:pose_presenceIMAGE_SIZE:image_size")VALIDATED_LANDMARKS:output_pose_landmarksRinput_frameszoutput_pose_landmarks‚detector_model_delegate‚landmarks_model_delegate
