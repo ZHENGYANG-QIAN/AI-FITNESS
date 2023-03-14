@@ -3,5 +3,6 @@ mediapipe
 matplotlib
 numpy
 tqdm
-requests
 pillow
+requests
+
