@@ -1,4 +1,0 @@
-python-opencv
-mediapipe == 0.8.7.4
-matplotlib
-numpy 
