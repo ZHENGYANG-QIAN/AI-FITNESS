@@ -18,7 +18,9 @@ package com.google.mlkit.vision.demo.java.segmenter;
 
 import android.content.Context;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import com.google.android.gms.tasks.Task;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.demo.GraphicOverlay;
@@ -29,44 +31,46 @@ import com.google.mlkit.vision.segmentation.SegmentationMask;
 import com.google.mlkit.vision.segmentation.Segmenter;
 import com.google.mlkit.vision.segmentation.selfie.SelfieSegmenterOptions;
 
-/** A processor to run Segmenter. */
+/**
+ * A processor to run Segmenter.
+ */
 public class SegmenterProcessor extends VisionProcessorBase<SegmentationMask> {
 
-  private static final String TAG = "SegmenterProcessor";
+    private static final String TAG = "SegmenterProcessor";
 
-  private final Segmenter segmenter;
+    private final Segmenter segmenter;
 
-  public SegmenterProcessor(Context context) {
-    this(context, /* isStreamMode= */ true);
-  }
-
-  public SegmenterProcessor(Context context, boolean isStreamMode) {
-    super(context);
-    SelfieSegmenterOptions.Builder optionsBuilder = new SelfieSegmenterOptions.Builder();
-    optionsBuilder.setDetectorMode(
-      isStreamMode ? SelfieSegmenterOptions.STREAM_MODE : SelfieSegmenterOptions.SINGLE_IMAGE_MODE);
-    if (PreferenceUtils.shouldSegmentationEnableRawSizeMask(context)) {
-      optionsBuilder.enableRawSizeMask();
+    public SegmenterProcessor(Context context) {
+        this(context, /* isStreamMode= */ true);
     }
 
-    SelfieSegmenterOptions options = optionsBuilder.build();
-    segmenter = Segmentation.getClient(options);
-    Log.d(TAG, "SegmenterProcessor created with option: " + options);
-  }
+    public SegmenterProcessor(Context context, boolean isStreamMode) {
+        super(context);
+        SelfieSegmenterOptions.Builder optionsBuilder = new SelfieSegmenterOptions.Builder();
+        optionsBuilder.setDetectorMode(
+                isStreamMode ? SelfieSegmenterOptions.STREAM_MODE : SelfieSegmenterOptions.SINGLE_IMAGE_MODE);
+        if (PreferenceUtils.shouldSegmentationEnableRawSizeMask(context)) {
+            optionsBuilder.enableRawSizeMask();
+        }
 
-  @Override
-  protected Task<SegmentationMask> detectInImage(InputImage image) {
-    return segmenter.process(image);
-  }
+        SelfieSegmenterOptions options = optionsBuilder.build();
+        segmenter = Segmentation.getClient(options);
+        Log.d(TAG, "SegmenterProcessor created with option: " + options);
+    }
 
-  @Override
-  protected void onSuccess(
-      @NonNull SegmentationMask segmentationMask, @NonNull GraphicOverlay graphicOverlay) {
-    graphicOverlay.add(new SegmentationGraphic(graphicOverlay, segmentationMask));
-  }
+    @Override
+    protected Task<SegmentationMask> detectInImage(InputImage image) {
+        return segmenter.process(image);
+    }
 
-  @Override
-  protected void onFailure(@NonNull Exception e) {
-    Log.e(TAG, "Segmentation failed: " + e);
-  }
+    @Override
+    protected void onSuccess(
+            @NonNull SegmentationMask segmentationMask, @NonNull GraphicOverlay graphicOverlay) {
+        graphicOverlay.add(new SegmentationGraphic(graphicOverlay, segmentationMask));
+    }
+
+    @Override
+    protected void onFailure(@NonNull Exception e) {
+        Log.e(TAG, "Segmentation failed: " + e);
+    }
 }
