@@ -1289,8 +1289,6 @@ int string desc_camerax_live_preview_activity 0x7f0e0032
 int string desc_cameraxsource_demo_activity 0x7f0e0033
 int string desc_still_image_activity 0x7f0e0034
 int string download_error 0x7f0e0035
-int string java_entry_title 0x7f0e0036
-int string kotlin_entry_title 0x7f0e0037
 int string low_storage_error 0x7f0e0038
 int string menu_item_settings 0x7f0e0039
 int string no_camera_permission 0x7f0e003a

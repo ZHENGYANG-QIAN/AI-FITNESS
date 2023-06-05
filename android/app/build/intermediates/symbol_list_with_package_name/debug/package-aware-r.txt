@@ -1290,8 +1290,6 @@ string desc_camerax_live_preview_activity
 string desc_cameraxsource_demo_activity
 string desc_still_image_activity
 string download_error
-string java_entry_title
-string kotlin_entry_title
 string low_storage_error
 string menu_item_settings
 string no_camera_permission

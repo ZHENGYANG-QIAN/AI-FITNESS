@@ -16,14 +16,18 @@
 
 package com.google.mlkit.vision.demo.java;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.StrictMode;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,13 +41,24 @@ import android.widget.TextView;
 import com.google.mlkit.vision.demo.BuildConfig;
 import com.google.mlkit.vision.demo.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Demo app chooser which allows you pick from all available testing Activities.
  */
 public final class ChooserActivity extends AppCompatActivity
         implements AdapterView.OnItemClickListener {
+    // RUNTIME_PERMISSIONS
     private static final String TAG = "ChooserActivity";
+    private static final int PERMISSION_REQUESTS = 1;
+    private static final String[] REQUIRED_RUNTIME_PERMISSIONS = {
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+    };
 
+    // Activities
     @SuppressWarnings("NewApi") // CameraX is only available on API 21+
     private static final Class<?>[] CLASSES =
             VERSION.SDK_INT < VERSION_CODES.LOLLIPOP
@@ -69,8 +84,14 @@ public final class ChooserActivity extends AppCompatActivity
                     R.string.desc_cameraxsource_demo_activity,
             };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // GET_RUNTIME_PERMISSIONS
+        if (!allRuntimePermissionsGranted()) {
+            getRuntimePermissions();
+        }
+
         if (BuildConfig.DEBUG) {
             StrictMode.setThreadPolicy(
                     new StrictMode.ThreadPolicy.Builder().detectAll().penaltyLog().build());
@@ -95,6 +116,44 @@ public final class ChooserActivity extends AppCompatActivity
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }
+
+
+    private boolean allRuntimePermissionsGranted() {
+        for (String permission : REQUIRED_RUNTIME_PERMISSIONS) {
+            if (!isPermissionGranted(this, permission)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void getRuntimePermissions() {
+        List<String> permissionsToRequest = new ArrayList<>();
+        for (String permission : REQUIRED_RUNTIME_PERMISSIONS) {
+            if (!isPermissionGranted(this, permission)) {
+                permissionsToRequest.add(permission);
+            }
+        }
+
+        if (!permissionsToRequest.isEmpty()) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    permissionsToRequest.toArray(new String[0]),
+                    PERMISSION_REQUESTS
+            );
+        }
+    }
+
+    private boolean isPermissionGranted(Context context, String permission) {
+        if (ContextCompat.checkSelfPermission(context, permission)
+                == PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "Permission granted: " + permission);
+            return true;
+        }
+        Log.i(TAG, "Permission NOT granted: " + permission);
+        return false;
+    }
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

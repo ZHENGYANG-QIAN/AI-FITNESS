@@ -395,30 +395,24 @@ ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\an
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:38:13-60
 	android:name
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:37:13-64
-activity#com.google.mlkit.vision.demo.EntryChoiceActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:40:9-48:20
-	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:42:13-36
-	android:theme
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:43:13-44
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:41:13-48
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:44:13-47:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:45:17-68
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:45:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:46:17-76
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:46:27-74
 activity#com.google.mlkit.vision.demo.java.ChooserActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:50:9-53:20
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:55:9-63:20
 	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:52:13-37
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:57:13-36
+	android:theme
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:58:13-44
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:51:13-49
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:56:13-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:59:13-62:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:60:17-68
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:60:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:61:17-76
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:61:27-74
 activity#com.google.mlkit.vision.demo.java.LivePreviewActivity
 ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:65:9-69:20
 	android:exported

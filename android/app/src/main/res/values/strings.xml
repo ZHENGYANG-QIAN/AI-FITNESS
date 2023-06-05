@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">USTC Vision</string>
-    <string name="java_entry_title" translatable="false">运行Java（推荐）</string>
-    <string name="kotlin_entry_title" translatable="false">运行Kotlin</string>
+    <string name="app_name" translatable="false">USTC CV</string>
     <string name="ok" translatable="false">OK</string>
     <string name="permission_camera_rationale" translatable="false">Access to the camera is needed for detection</string>
     <string name="no_camera_permission" translatable="false">This application cannot run because it does not have the camera permission.  The application will now exit.</string>

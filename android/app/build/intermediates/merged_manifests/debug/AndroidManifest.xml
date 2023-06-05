@@ -54,23 +54,8 @@
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="barcode,face,ocr,ica,custom_ica" />
 
-        <activity
-            android:name="com.google.mlkit.vision.demo.EntryChoiceActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.google.mlkit.vision.demo.java.ChooserActivity"
-            android:exported="false" >
-        </activity>
-
         <!-- <activity -->
-        <!-- android:name=".java.ChooserActivity" -->
+        <!-- android:name=".EntryChoiceActivity" -->
         <!-- android:exported="true" -->
         <!-- android:theme="@style/AppTheme"> -->
         <!-- <intent-filter> -->
@@ -79,6 +64,22 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
 
+
+        <!-- <activity -->
+        <!-- android:name=".java.ChooserActivity" -->
+        <!-- android:exported="false"> -->
+        <!-- </activity> -->
+
+        <activity
+            android:name="com.google.mlkit.vision.demo.java.ChooserActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.google.mlkit.vision.demo.java.LivePreviewActivity"
             android:exported="false"
