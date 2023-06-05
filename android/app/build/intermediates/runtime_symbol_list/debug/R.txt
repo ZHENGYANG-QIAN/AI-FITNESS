@@ -1042,10 +1042,8 @@ int id imageView 0x7f08009d
 int id info 0x7f08009e
 int id invisible 0x7f08009f
 int id italic 0x7f0800a0
-int id java_entry_point 0x7f0800a1
 int id jumpToEnd 0x7f0800a2
 int id jumpToStart 0x7f0800a3
-int id kotlin_entry_point 0x7f0800a4
 int id layout 0x7f0800a5
 int id left 0x7f0800a6
 int id light 0x7f0800a7
@@ -1220,7 +1218,6 @@ int layout activity_settings 0x7f0b001d
 int layout activity_still_image 0x7f0b001e
 int layout activity_vision_camerax_live_preview 0x7f0b001f
 int layout activity_vision_cameraxsource_demo 0x7f0b0020
-int layout activity_vision_entry_choice 0x7f0b0021
 int layout activity_vision_live_preview 0x7f0b0022
 int layout custom_dialog 0x7f0b0023
 int layout notification_action 0x7f0b0024

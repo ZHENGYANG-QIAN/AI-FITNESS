@@ -37,23 +37,8 @@
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="barcode,face,ocr,ica,custom_ica"/>
 
-<!--        <activity-->
-<!--            android:name=".EntryChoiceActivity"-->
-<!--            android:exported="true"-->
-<!--            android:theme="@style/AppTheme">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN"/>-->
-<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-
-<!--        <activity-->
-<!--            android:name=".java.ChooserActivity"-->
-<!--            android:exported="false">-->
-<!--        </activity>-->
-
         <activity
-            android:name=".java.ChooserActivity"
+            android:name=".EntryChoiceActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -61,6 +46,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".java.ChooserActivity"
+            android:exported="false">
+        </activity>
+
+<!--        <activity-->
+<!--            android:name=".java.ChooserActivity"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@style/AppTheme">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
 
         <activity
             android:name=".java.LivePreviewActivity"
@@ -82,35 +82,6 @@
 
         <activity
             android:name=".java.StillImageActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name=".kotlin.ChooserActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".kotlin.LivePreviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name=".kotlin.CameraXLivePreviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name=".kotlin.CameraXSourceDemoActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name=".kotlin.StillImageActivity"
             android:exported="false"
             android:theme="@style/AppTheme">
         </activity>

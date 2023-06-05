@@ -1043,10 +1043,8 @@ id imageView
 id info
 id invisible
 id italic
-id java_entry_point
 id jumpToEnd
 id jumpToStart
-id kotlin_entry_point
 id layout
 id left
 id light
@@ -1221,7 +1219,6 @@ layout activity_settings
 layout activity_still_image
 layout activity_vision_camerax_live_preview
 layout activity_vision_cameraxsource_demo
-layout activity_vision_entry_choice
 layout activity_vision_live_preview
 layout custom_dialog
 layout notification_action

@@ -48,7 +48,7 @@
     <string name="pref_title_camerax_rear_camera_target_resolution" translatable="false">CameraX rear camera target resolution</string>
     <string name="pref_title_camerax_front_camera_target_resolution" translatable="false">CameraX front camera target resolution</string>
     <string name="pref_title_camera_live_viewport" translatable="false">启动实时视角</string>
-    <string name="pref_summary_camera_live_viewport" translatable="false">Do not block camera preview drawing on detection</string>
+    <string name="pref_summary_camera_live_viewport" translatable="false">检测时不阻止相机预览绘制</string>
 
     <!-- Strings for info preference. -->
     <string name="pref_title_info_hide" translatable="false">隐藏检测信息</string>
@@ -57,7 +57,7 @@
     <!-- Strings for text recognition preference. -->
     <string name="pref_title_group_recognized_text_in_blocks" translatable="false">分段显示检测文本</string>
     <string name="pref_key_group_recognized_text_in_blocks" translatable="false">grtib</string>
-    <string name="pref_title_show_language_tag" translatable="false">Show language identified</string>
+    <string name="pref_title_show_language_tag" translatable="false">显示已识别的语言</string>
     <string name="pref_key_show_language_tag" translatable="false">slt</string>
 
     <!-- Strings for object detector enable multiple objects preference. -->
@@ -126,9 +126,9 @@
     <string name="pref_entry_values_pose_detector_performance_mode_accurate" translatable="false">2</string>
 
     <!-- Strings for pose detector prefer gpu preference. -->
-    <string name="pref_title_pose_detector_prefer_gpu" translatable="false">Prefer using GPU</string>
+    <string name="pref_title_pose_detector_prefer_gpu" translatable="false">优先使用GPU</string>
     <string name="pref_key_pose_detector_prefer_gpu" translatable="false">pdpg</string>
-    <string name="pref_summary_pose_detector_prefer_gpu" translatable="false">If enabled, GPU will be used as long as it is available, stable and returns correct results. In this case, the detector will not check if GPU is really faster than CPU.</string>
+    <string name="pref_summary_pose_detector_prefer_gpu" translatable="false">如果启用了GPU加速，在GPU可用、稳定并返回正确结果的情况下将使用它。在这种情况下，检测器不会检查GPU是否确实比CPU更快</string>
 
     <!-- Strings for pose detector showInFrameLikelihood preference. -->
     <string name="pref_title_pose_detector_show_in_frame_likelihood" translatable="false">显示置信度</string>
