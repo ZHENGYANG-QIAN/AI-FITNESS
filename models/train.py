@@ -43,7 +43,8 @@ if continue_train > 0:
     model.load_weights(os.path.join(checkpoint_path, "models/model_ep{}.h5".format(continue_train)))
 else:
     if train_mode:
-        print("Load heatmap weights", os.path.join(checkpoint_path_heatmap, "models/model_ep{}.h5".format(best_pre_train)))
+        print("Load heatmap weights",
+              os.path.join(checkpoint_path_heatmap, "models/model_ep{}.h5".format(best_pre_train)))
         model.load_weights(os.path.join(checkpoint_path_heatmap, "models/model_ep{}.h5".format(best_pre_train)))
 
 if train_mode:
@@ -62,13 +63,15 @@ else:
 
 if dataset == "lsp":
     x_train = data[:(number_images - 400)]
-    y_train = [heatmap_set[:(number_images - 400)], coordinates[:(number_images - 400)], visibility[:(number_images - 400)]]
+    y_train = [heatmap_set[:(number_images - 400)], coordinates[:(number_images - 400)],
+               visibility[:(number_images - 400)]]
 
     x_val = data[-400:-200]
     y_val = [heatmap_set[-400:-200], coordinates[-400:-200], visibility[-400:-200]]
 else:
     x_train = data[:(number_images - 2000)]
-    y_train = [heatmap_set[:(number_images - 2000)], coordinates[:(number_images - 2000)], visibility[:(number_images - 2000)]]
+    y_train = [heatmap_set[:(number_images - 2000)], coordinates[:(number_images - 2000)],
+               visibility[:(number_images - 2000)]]
 
     x_val = data[-2000:-1000]
     y_val = [heatmap_set[-2000:-1000], coordinates[-2000:-1000], visibility[-2000:-1000]]

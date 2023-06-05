@@ -1,10 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.mlkit:text-recognition-korean:16.0.0-beta4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/613ba8a5bd930e3788ae05f2fe5792e3/transformed/jetified-text-recognition-korean-16.0.0-beta4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/96eddd3dd63202d10ae58fe3fc894421/transformed/jetified-text-recognition-korean-16.0.0-beta4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/96eddd3dd63202d10ae58fe3fc894421/transformed/jetified-text-recognition-korean-16.0.0-beta4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/96eddd3dd63202d10ae58fe3fc894421/transformed/jetified-text-recognition-korean-16.0.0-beta4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/28492ce9052865a6f50d58ece3763b0b/transformed/jetified-text-recognition-korean-16.0.0-beta4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/28492ce9052865a6f50d58ece3763b0b/transformed/jetified-text-recognition-korean-16.0.0-beta4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/text-recognition-korean/16.0.0-beta4/9dbade1aa01361aeba2eb9b11006d44bc2c36f4a/text-recognition-korean-16.0.0-beta4-javadoc.jar!/" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">CLeaNS Vision</string>
+    <string name="app_name" translatable="false">USTC Vision</string>
     <string name="java_entry_title" translatable="false">运行Java（推荐）</string>
     <string name="kotlin_entry_title" translatable="false">运行Kotlin</string>
     <string name="ok" translatable="false">OK</string>

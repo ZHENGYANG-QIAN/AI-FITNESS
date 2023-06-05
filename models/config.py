@@ -23,4 +23,3 @@ eval_mode = 0
 continue_train = 0
 best_pre_train = 0
 epoch_to_test = 106
-

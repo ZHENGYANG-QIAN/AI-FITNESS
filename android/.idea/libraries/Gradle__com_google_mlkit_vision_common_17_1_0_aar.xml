@@ -1,10 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.mlkit:vision-common:17.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01da161da20d5c60da89ee4db2d90b98/transformed/jetified-vision-common-17.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e1e9b77930d1d86822dccc17f20d6ea9/transformed/jetified-vision-common-17.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e1e9b77930d1d86822dccc17f20d6ea9/transformed/jetified-vision-common-17.1.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e1e9b77930d1d86822dccc17f20d6ea9/transformed/jetified-vision-common-17.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f8058b33b84818c9b3952c62bf9ac09d/transformed/jetified-vision-common-17.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f8058b33b84818c9b3952c62bf9ac09d/transformed/jetified-vision-common-17.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/vision-common/17.1.0/94623971dca86f85b9f8a7fa2618e656b79336bc/vision-common-17.1.0-javadoc.jar!/" />

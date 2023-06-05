@@ -132,13 +132,7 @@ androidx/core/widget/TextViewCompat$AutoSizeTextType.class
 androidx/exifinterface/media/ExifInterface$IfdType.class
 androidx/lifecycle/Lifecycle$Event.class
 androidx/lifecycle/OnLifecycleEvent.class
-androidx/multidex/MultiDex$V14$ElementConstructor.class
-androidx/multidex/MultiDex$V14$ICSElementConstructor.class
-androidx/multidex/MultiDex$V14$JBMR11ElementConstructor.class
-androidx/multidex/MultiDex$V14$JBMR2ElementConstructor.class
-androidx/multidex/MultiDex$V14.class
 androidx/multidex/MultiDex$V19.class
-androidx/multidex/MultiDex$V4.class
 androidx/multidex/MultiDex.class
 androidx/multidex/MultiDexApplication.class
 androidx/multidex/MultiDexExtractor$1.class
@@ -366,6 +360,7 @@ javax/inject/Qualifier.class
 javax/inject/Scope.class
 javax/inject/Singleton.class
 kotlin/BuilderInference.class
+kotlin/ContextFunctionTypeParams.class
 kotlin/DeepRecursiveScope.class
 kotlin/Deprecated.class
 kotlin/DeprecatedSinceKotlin.class
@@ -375,6 +370,7 @@ kotlin/ExperimentalMultiplatform.class
 kotlin/ExperimentalStdlibApi.class
 kotlin/ExperimentalUnsignedTypes.class
 kotlin/ExtensionFunctionType.class
+kotlin/Metadata$DefaultImpls.class
 kotlin/Metadata.class
 kotlin/OptIn.class
 kotlin/OptionalExpectation.class
@@ -426,6 +422,7 @@ kotlin/io/path/PathsKt__PathUtilsKt.class
 kotlin/js/ExperimentalJsExport.class
 kotlin/jvm/JvmClassMappingKt.class
 kotlin/jvm/JvmDefault.class
+kotlin/jvm/JvmDefaultWithCompatibility.class
 kotlin/jvm/JvmDefaultWithoutCompatibility.class
 kotlin/jvm/JvmField.class
 kotlin/jvm/JvmInline.class
@@ -445,6 +442,8 @@ kotlin/jvm/Throws.class
 kotlin/jvm/Transient.class
 kotlin/jvm/Volatile.class
 kotlin/jvm/internal/FunctionImpl.class
+kotlin/jvm/internal/RepeatableContainer.class
+kotlin/jvm/internal/SerializedIr.class
 kotlin/ranges/RangesKt___RangesKt.class
 kotlin/sequences/SequencesKt__SequenceBuilderKt.class
 kotlin/sequences/SequencesKt___SequencesKt.class
@@ -455,6 +454,8 @@ kotlin/text/StringsKt__StringNumberConversionsJVMKt.class
 kotlin/text/StringsKt__StringsJVMKt.class
 kotlin/text/StringsKt__StringsKt.class
 kotlin/text/StringsKt___StringsKt.class
+kotlin/text/Typography.class
+kotlin/time/Duration$Companion.class
 kotlin/time/Duration.class
 kotlin/time/DurationKt.class
 kotlin/time/ExperimentalTime.class
@@ -464,6 +465,7 @@ kotlinx/android/extensions/ContainerOptions.class
 kotlinx/android/parcel/IgnoredOnParcel.class
 kotlinx/android/parcel/Parcelize.class
 kotlinx/android/parcel/RawValue.class
+kotlinx/android/parcel/TypeParceler$Container.class
 kotlinx/android/parcel/TypeParceler.class
 kotlinx/android/parcel/WriteWith.class
 kotlinx/coroutines/ChildHandle.class

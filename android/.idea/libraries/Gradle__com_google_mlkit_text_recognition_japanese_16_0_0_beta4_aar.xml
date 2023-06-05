@@ -1,10 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.mlkit:text-recognition-japanese:16.0.0-beta4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4532fbb160f71009deb96ed6a64d4c11/transformed/jetified-text-recognition-japanese-16.0.0-beta4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6df473ccab7b50cb50a4cd5d26d19709/transformed/jetified-text-recognition-japanese-16.0.0-beta4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6df473ccab7b50cb50a4cd5d26d19709/transformed/jetified-text-recognition-japanese-16.0.0-beta4/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6df473ccab7b50cb50a4cd5d26d19709/transformed/jetified-text-recognition-japanese-16.0.0-beta4/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c777f9d0005116ee83b36d375df0a23e/transformed/jetified-text-recognition-japanese-16.0.0-beta4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c777f9d0005116ee83b36d375df0a23e/transformed/jetified-text-recognition-japanese-16.0.0-beta4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/text-recognition-japanese/16.0.0-beta4/ed540d8c50c12a40f1d0146622d03ad9485a5303/text-recognition-japanese-16.0.0-beta4-javadoc.jar!/" />

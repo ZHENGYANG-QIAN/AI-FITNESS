@@ -23,8 +23,8 @@
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
-        android:icon="@drawable/wave"
-        android:label="CLeaNS CV"
+        android:icon="@drawable/ustc"
+        android:label="USTC CV"
         android:theme="@style/Theme.AppCompat">
 
         <meta-data
@@ -37,19 +37,29 @@
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="barcode,face,ocr,ica,custom_ica"/>
 
+<!--        <activity-->
+<!--            android:name=".EntryChoiceActivity"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@style/AppTheme">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name=".java.ChooserActivity"-->
+<!--            android:exported="false">-->
+<!--        </activity>-->
+
         <activity
-            android:name=".EntryChoiceActivity"
+            android:name=".java.ChooserActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".java.ChooserActivity"
-            android:exported="false">
         </activity>
 
         <activity
