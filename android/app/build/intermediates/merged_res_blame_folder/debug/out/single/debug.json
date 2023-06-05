@@ -1,158 +1,150 @@
 [
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxhdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxhdpi\\ic_switch_camera_white_48dp.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxxhdpi_ic_settings_white_24dp.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxxhdpi/ic_settings_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_vision_cameraxsource_demo.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_vision_cameraxsource_demo.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable_list_item_background.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable/list_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-mdpi_ic_switch_camera_white_48dp_inset.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-mdpi\\ic_switch_camera_white_48dp_inset.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_chooser.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_chooser.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_spinner_style.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\spinner_style.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout-land_activity_vision_cameraxsource_demo.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout-land/activity_vision_cameraxsource_demo.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout-land_activity_vision_camerax_live_preview.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout-land\\activity_vision_camerax_live_preview.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_vision_camerax_live_preview.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_vision_camerax_live_preview.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxxhdpi_ic_switch_camera_white_48dp_inset.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxxhdpi/ic_switch_camera_white_48dp_inset.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout-land_activity_vision_cameraxsource_demo.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout-land\\activity_vision_cameraxsource_demo.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xhdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xhdpi/ic_switch_camera_white_48dp.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-mdpi_ic_settings_white_24dp.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-mdpi\\ic_settings_white_24dp.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_vision_live_preview.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_vision_live_preview.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_toggle_style.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\toggle_style.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/xml_preference_still_image.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/xml/preference_still_image.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xhdpi_ic_settings_white_24dp.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xhdpi\\ic_settings_white_24dp.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-hdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-hdpi/ic_switch_camera_white_48dp.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxxhdpi_ic_switch_camera_white_48dp_inset.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxxhdpi\\ic_switch_camera_white_48dp_inset.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-mdpi_ic_switch_camera_white_48dp_inset.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-mdpi/ic_switch_camera_white_48dp_inset.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xhdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xhdpi\\ic_switch_camera_white_48dp.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxhdpi_ic_settings_white_24dp.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxhdpi/ic_settings_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxhdpi_ic_settings_white_24dp.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxhdpi\\ic_settings_white_24dp.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_spinner_style.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/spinner_style.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-hdpi_ic_settings_white_24dp.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-hdpi\\ic_settings_white_24dp.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable_logo_mlkit.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable/logo_mlkit.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-hdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-hdpi\\ic_switch_camera_white_48dp.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_still_image.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_still_image.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\xml_preference_still_image.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\xml\\preference_still_image.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable_ustc.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable/ustc.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxxhdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxxhdpi\\ic_switch_camera_white_48dp.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_toggle_style.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/toggle_style.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable_logo_mlkit.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable\\logo_mlkit.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/menu_camera_button_menu.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/menu/camera_button_menu.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_vision_live_preview.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_vision_live_preview.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xhdpi_ic_settings_white_24dp.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xhdpi/ic_settings_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxhdpi_ic_switch_camera_white_48dp_inset.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxhdpi/ic_switch_camera_white_48dp_inset.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_vision_entry_choice.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_vision_entry_choice.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/xml_preference_live_preview_quickstart.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/xml/preference_live_preview_quickstart.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xhdpi_ic_switch_camera_white_48dp_inset.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xhdpi\\ic_switch_camera_white_48dp_inset.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-mdpi_ic_settings_white_24dp.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-mdpi/ic_settings_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_settings_style.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\settings_style.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_settings.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_vision_cameraxsource_demo.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_vision_cameraxsource_demo.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout-land_activity_vision_live_preview.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout-land\\activity_vision_live_preview.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable_wave.jpg.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable\\wave.jpg"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable_ustc.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable\\ustc.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xhdpi_ic_switch_camera_white_48dp_inset.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xhdpi/ic_switch_camera_white_48dp_inset.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\menu_camera_button_menu.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\menu\\camera_button_menu.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxhdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxhdpi/ic_switch_camera_white_48dp.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_chooser.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_chooser.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-mdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-mdpi/ic_switch_camera_white_48dp.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxxhdpi_ic_settings_white_24dp.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxxhdpi\\ic_settings_white_24dp.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_settings_style.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/settings_style.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\xml_preference_live_preview_quickstart.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\xml\\preference_live_preview_quickstart.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout-land_activity_vision_camerax_live_preview.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout-land/activity_vision_camerax_live_preview.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-xxxhdpi_ic_switch_camera_white_48dp.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-xxxhdpi/ic_switch_camera_white_48dp.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_still_image.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_still_image.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-hdpi_ic_switch_camera_white_48dp_inset.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-hdpi/ic_switch_camera_white_48dp_inset.png"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-mdpi_ic_switch_camera_white_48dp.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-mdpi\\ic_switch_camera_white_48dp.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout-land_activity_vision_live_preview.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout-land/activity_vision_live_preview.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable_list_item_background.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable\\list_item_background.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/layout_activity_vision_camerax_live_preview.xml.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/layout/activity_vision_camerax_live_preview.xml"
     },
     {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-hdpi_ic_switch_camera_white_48dp_inset.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-hdpi\\ic_switch_camera_white_48dp_inset.png"
-    },
-    {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\drawable-xxhdpi_ic_switch_camera_white_48dp_inset.png.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\drawable-xxhdpi\\ic_switch_camera_white_48dp_inset.png"
-    },
-    {
-        "merged": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-merged_res-20:\\layout_activity_settings.xml.flat",
-        "source": "C:\\Users\\12549\\.gradle\\daemon\\7.5\\com.google.mlkit.vision.demo.app-main-22:\\layout\\activity_settings.xml"
+        "merged": "com.google.mlkit.vision.demo.app-merged_res-20:/drawable-hdpi_ic_settings_white_24dp.png.flat",
+        "source": "com.google.mlkit.vision.demo.app-main-22:/drawable-hdpi/ic_settings_white_24dp.png"
     }
 ]

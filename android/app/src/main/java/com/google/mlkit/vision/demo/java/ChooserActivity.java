@@ -48,7 +48,7 @@ import java.util.List;
  * Demo app chooser which allows you pick from all available testing Activities.
  */
 public final class ChooserActivity extends AppCompatActivity
-        implements AdapterView.OnItemClickListener {
+        implements AdapterView.OnItemClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
     // RUNTIME_PERMISSIONS
     private static final String TAG = "ChooserActivity";
     private static final int PERMISSION_REQUESTS = 1;
@@ -87,11 +87,6 @@ public final class ChooserActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // GET_RUNTIME_PERMISSIONS
-        if (!allRuntimePermissionsGranted()) {
-            getRuntimePermissions();
-        }
-
         if (BuildConfig.DEBUG) {
             StrictMode.setThreadPolicy(
                     new StrictMode.ThreadPolicy.Builder().detectAll().penaltyLog().build());
@@ -106,6 +101,11 @@ public final class ChooserActivity extends AppCompatActivity
         Log.d(TAG, "onCreate");
 
         setContentView(R.layout.activity_chooser);
+
+        // GET_RUNTIME_PERMISSIONS
+        if (!allRuntimePermissionsGranted()) {
+            getRuntimePermissions();
+        }
 
         // Set up ListView and Adapter
         ListView listView = findViewById(R.id.test_activity_list_view);

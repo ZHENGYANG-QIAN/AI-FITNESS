@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
 MERGED from [com.google.mlkit:pose-detection:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\55772ff05de935b0c9f396c3a0bd6e87\transformed\jetified-pose-detection-18.0.0-beta2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.mlkit:pose-detection-accurate:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\4ea527111c80fc40a0ec3ccbd78b0f3a\transformed\jetified-pose-detection-accurate-18.0.0-beta2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.mlkit:pose-detection-common:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\6f26d07e6355c04677e32544c46c1298\transformed\jetified-pose-detection-common-18.0.0-beta2\AndroidManifest.xml:2:1-35:12
@@ -84,22 +84,22 @@ MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\12549\.gradle\caches\transfo
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\12549\.gradle\caches\transforms-3\72e6b0ec47b03602f4eb5550ebcc17ef\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\12549\.gradle\caches\transforms-3\1060d25210a7444c5d31132ecda8a8ba\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\12549\.gradle\caches\transforms-3\8286a8c73e719543075a2a8314045dc2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
-INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
 	package
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:5:5-43
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:4:5-51
 	android:versionCode
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-100:12
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:3:5-63
@@ -310,7 +310,7 @@ ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\an
 	android:name
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:22:22-62
 application
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:24:5-93:19
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:24:5-77:19
 MERGED from [com.google.mlkit:pose-detection:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\55772ff05de935b0c9f396c3a0bd6e87\transformed\jetified-pose-detection-18.0.0-beta2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.mlkit:pose-detection:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\55772ff05de935b0c9f396c3a0bd6e87\transformed\jetified-pose-detection-18.0.0-beta2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.mlkit:pose-detection-accurate:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\4ea527111c80fc40a0ec3ccbd78b0f3a\transformed\jetified-pose-detection-accurate-18.0.0-beta2\AndroidManifest.xml:7:5-20
@@ -396,69 +396,67 @@ ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\an
 	android:name
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:37:13-64
 activity#com.google.mlkit.vision.demo.java.ChooserActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:55:9-63:20
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:40:9-47:20
 	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:57:13-36
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:41:13-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:43:13-46:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:44:17-68
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:45:17-76
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:45:27-74
+activity#com.google.mlkit.vision.demo.java.LivePreviewActivity
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:49:9-53:20
+	android:exported
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:51:13-37
+	android:theme
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:52:13-44
+	android:name
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:50:13-53
+activity#com.google.mlkit.vision.demo.java.CameraXLivePreviewActivity
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:55:9-59:20
+	android:exported
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:57:13-37
 	android:theme
 		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:58:13-44
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:56:13-49
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:59:13-62:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:60:17-68
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:60:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:61:17-76
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:61:27-74
-activity#com.google.mlkit.vision.demo.java.LivePreviewActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:65:9-69:20
-	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:67:13-37
-	android:theme
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:68:13-44
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:66:13-53
-activity#com.google.mlkit.vision.demo.java.CameraXLivePreviewActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:71:9-75:20
-	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:73:13-37
-	android:theme
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:74:13-44
-	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:72:13-60
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:56:13-60
 activity#com.google.mlkit.vision.demo.java.CameraXSourceDemoActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:77:9-81:20
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:61:9-65:20
 	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:79:13-37
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:63:13-37
 	android:theme
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:80:13-44
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:64:13-44
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:78:13-59
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:62:13-59
 activity#com.google.mlkit.vision.demo.java.StillImageActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:83:9-87:20
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:67:9-71:20
 	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:69:13-37
 	android:theme
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:86:13-44
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:70:13-44
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:84:13-52
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:68:13-52
 activity#com.google.mlkit.vision.demo.preference.SettingsActivity
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:89:9-91:39
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:73:9-75:39
 	android:exported
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:91:13-37
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:90:13-56
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:74:13-56
 queries
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:94:5-98:15
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:78:5-82:15
 intent#action:name:android.media.action.IMAGE_CAPTURE
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:95:9-97:18
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:79:9-81:18
 action#android.media.action.IMAGE_CAPTURE
-ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:96:13-73
+ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:80:13-73
 	android:name
-		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:96:21-70
+		ADDED from C:\Users\12549\Documents\MyProjects\Human-body-key-point-detection\android\app\src\main\AndroidManifest.xml:80:21-70
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.mlkit:pose-detection-common:18.0.0-beta2] C:\Users\12549\.gradle\caches\transforms-3\6f26d07e6355c04677e32544c46c1298\transformed\jetified-pose-detection-common-18.0.0-beta2\AndroidManifest.xml:7:5-79
 MERGED from [com.google.mlkit:object-detection:17.0.0] C:\Users\12549\.gradle\caches\transforms-3\793d6e9e490588f16de62bcbcc130ec0\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:7:5-79
