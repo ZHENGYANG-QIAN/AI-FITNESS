@@ -9,8 +9,6 @@
     <string name="toggle_turn_off" translatable="false">Back</string>
     <string name="desc_camera_source_activity" translatable="false">动态模式（需使用摄像头）</string>
     <string name="desc_still_image_activity" translatable="false">静态模式</string>
-    <string name="desc_camerax_live_preview_activity" translatable="false">Vision detectors demo with live preview using CameraX. Note that CameraX is only supported on API 21+</string>
-    <string name="desc_cameraxsource_demo_activity" translatable="false">Object detection with custom classifier using ML Kit CameraXSource API. Note that CameraX is only supported on API 21+</string>
     <string name="download_error" translatable="false">下载错误</string>
     <string name="start_over" translatable="false">重启</string>
     <string name="menu_item_settings" translatable="false">设置</string>
@@ -21,8 +19,6 @@
     <string name="pref_screen" translatable="false">ps</string>
     <string name="pref_screen_title_live_preview" translatable="false">Live preview settings</string>
     <string name="pref_screen_title_still_image" translatable="false">Still image settings</string>
-    <string name="pref_screen_title_camerax_live_preview" translatable="false">CameraX live preview settings</string>
-    <string name="pref_screen_title_cameraxsource_demo" translatable="false">CameraXSource live preview settings</string>
     <string name="pref_category_info" translatable="false">检测信息</string>
     <string name="pref_category_face_detection" translatable="false">人脸检测</string>
     <string name="pref_category_object_detection" translatable="false">目标检测</string>
@@ -38,13 +34,9 @@
     <string name="pref_key_rear_camera_picture_size" translatable="false">rcpts</string>
     <string name="pref_key_front_camera_preview_size" translatable="false">fcpvs</string>
     <string name="pref_key_front_camera_picture_size" translatable="false">fcpts</string>
-    <string name="pref_key_camerax_rear_camera_target_resolution" translatable="false">crctas</string>
-    <string name="pref_key_camerax_front_camera_target_resolution" translatable="false">cfctas</string>
     <string name="pref_key_camera_live_viewport" translatable="false">clv</string>
     <string name="pref_title_rear_camera_preview_size" translatable="false">后置摄像头尺寸</string>
     <string name="pref_title_front_camera_preview_size" translatable="false">前置摄像头尺寸</string>
-    <string name="pref_title_camerax_rear_camera_target_resolution" translatable="false">CameraX rear camera target resolution</string>
-    <string name="pref_title_camerax_front_camera_target_resolution" translatable="false">CameraX front camera target resolution</string>
     <string name="pref_title_camera_live_viewport" translatable="false">启动实时视角</string>
     <string name="pref_summary_camera_live_viewport" translatable="false">检测时不阻止相机预览绘制</string>
 

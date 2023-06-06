@@ -49,10 +49,6 @@ public class LivePreviewPreferenceFragment extends PreferenceFragment {
     void setUpCameraPreferences() {
         PreferenceCategory cameraPreference =
                 (PreferenceCategory) findPreference(getString(R.string.pref_category_key_camera));
-        cameraPreference.removePreference(
-                findPreference(getString(R.string.pref_key_camerax_rear_camera_target_resolution)));
-        cameraPreference.removePreference(
-                findPreference(getString(R.string.pref_key_camerax_front_camera_target_resolution)));
         setUpCameraPreviewSizePreference(
                 R.string.pref_key_rear_camera_preview_size,
                 R.string.pref_key_rear_camera_picture_size,

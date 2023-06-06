@@ -70,16 +70,6 @@
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.google.mlkit.vision.demo.java.CameraXLivePreviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" >
-        </activity>
-        <activity
-            android:name="com.google.mlkit.vision.demo.java.CameraXSourceDemoActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" >
-        </activity>
-        <activity
             android:name="com.google.mlkit.vision.demo.java.StillImageActivity"
             android:exported="false"
             android:theme="@style/AppTheme" >

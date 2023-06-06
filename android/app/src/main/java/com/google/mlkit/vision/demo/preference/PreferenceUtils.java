@@ -79,24 +79,6 @@ public class PreferenceUtils {
         }
     }
 
-    @RequiresApi(VERSION_CODES.LOLLIPOP)
-    @Nullable
-    public static android.util.Size getCameraXTargetResolution(Context context, int lensfacing) {
-        Preconditions.checkArgument(
-                lensfacing == CameraSelector.LENS_FACING_BACK
-                        || lensfacing == CameraSelector.LENS_FACING_FRONT);
-        String prefKey =
-                lensfacing == CameraSelector.LENS_FACING_BACK
-                        ? context.getString(R.string.pref_key_camerax_rear_camera_target_resolution)
-                        : context.getString(R.string.pref_key_camerax_front_camera_target_resolution);
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        try {
-            return android.util.Size.parseSize(sharedPreferences.getString(prefKey, null));
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
     public static boolean shouldHideDetectionInfo(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         String prefKey = context.getString(R.string.pref_key_info_hide);

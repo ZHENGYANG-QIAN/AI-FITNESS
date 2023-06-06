@@ -20,8 +20,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.StrictMode;
 
@@ -59,29 +57,16 @@ public final class ChooserActivity extends AppCompatActivity
     };
 
     // Activities
-    @SuppressWarnings("NewApi") // CameraX is only available on API 21+
     private static final Class<?>[] CLASSES =
-            VERSION.SDK_INT < VERSION_CODES.LOLLIPOP
-                    ? new Class<?>[]{
-                    LivePreviewActivity.class, StillImageActivity.class,
-            }
-                    : new Class<?>[]{
+            new Class<?>[]{
                     LivePreviewActivity.class,
                     StillImageActivity.class,
-                    CameraXLivePreviewActivity.class,
-                    CameraXSourceDemoActivity.class,
             };
 
     private static final int[] DESCRIPTION_IDS =
-            VERSION.SDK_INT < VERSION_CODES.LOLLIPOP
-                    ? new int[]{
-                    R.string.desc_camera_source_activity, R.string.desc_still_image_activity,
-            }
-                    : new int[]{
+            new int[]{
                     R.string.desc_camera_source_activity,
                     R.string.desc_still_image_activity,
-                    R.string.desc_camerax_live_preview_activity,
-                    R.string.desc_cameraxsource_demo_activity,
             };
 
 
