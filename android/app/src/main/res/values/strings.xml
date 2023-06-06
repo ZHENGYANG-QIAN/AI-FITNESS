@@ -2,9 +2,9 @@
 <resources>
     <string name="app_name" translatable="false">USTC CV</string>
     <string name="ok" translatable="false">OK</string>
-    <string name="permission_camera_rationale" translatable="false">Access to the camera is needed for detection</string>
-    <string name="no_camera_permission" translatable="false">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
-    <string name="low_storage_error" translatable="false">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="permission_camera_rationale" translatable="false">需要摄像头权限进行检测</string>
+    <string name="no_camera_permission" translatable="false">相机权限未开启，程序无法运行，即将退出</string>
+    <string name="low_storage_error" translatable="false">设备存储空间不足，无法下载面部检测器的依赖项</string>
     <string name="toggle_turn_on" translatable="false">Front</string>
     <string name="toggle_turn_off" translatable="false">Back</string>
     <string name="desc_camera_source_activity" translatable="false">动态模式（需使用摄像头）</string>
@@ -16,9 +16,9 @@
     <string name="custom_object_detection" translatable="false">自定义目标检测</string>
 
     <!-- Settings related strings. -->
-    <string name="pref_screen" translatable="false">ps</string>
-    <string name="pref_screen_title_live_preview" translatable="false">Live preview settings</string>
-    <string name="pref_screen_title_still_image" translatable="false">Still image settings</string>
+    <string name="pref_screen" translatable="false">pc</string>
+    <string name="pref_screen_title_live_preview" translatable="false">实时预览设置</string>
+    <string name="pref_screen_title_still_image" translatable="false">静态图像设置</string>
     <string name="pref_category_info" translatable="false">检测信息</string>
     <string name="pref_category_face_detection" translatable="false">人脸检测</string>
     <string name="pref_category_object_detection" translatable="false">目标检测</string>
@@ -72,8 +72,8 @@
     <!-- Strings for face detector contour mode preference. -->
     <string name="pref_title_face_detector_contour_mode" translatable="false">脸部轮廓模式</string>
     <string name="pref_key_live_preview_face_detection_contour_mode" translatable="false">lpfdcm</string>
-    <string name="pref_entries_face_detector_contour_mode_no_contours" translatable="false">No contours</string>
-    <string name="pref_entries_face_detector_contour_mode_all_contours" translatable="false">All contours</string>
+    <string name="pref_entries_face_detector_contour_mode_no_contours" translatable="false">不显示轮廓</string>
+    <string name="pref_entries_face_detector_contour_mode_all_contours" translatable="false">显示所有轮廓</string>
     <!-- The following entry values must match the ones in FaceDetectorOptions#ContourMode -->
     <string name="pref_entry_values_face_detector_contour_mode_no_contours" translatable="false">1</string>
     <string name="pref_entry_values_face_detector_contour_mode_all_contours" translatable="false">2</string>
@@ -103,7 +103,7 @@
     <!-- Strings for face detector min face size preference. -->
     <string name="pref_title_face_detector_min_face_size" translatable="false">最小化人脸尺寸</string>
     <string name="pref_key_live_preview_face_detection_min_face_size" translatable="false">lpfdmfs</string>
-    <string name="pref_dialog_message_face_detector_min_face_size" translatable="false">Proportion of the head width to the image width, and the valid value range is [0.0, 1.0]</string>
+    <string name="pref_dialog_message_face_detector_min_face_size" translatable="false">头部宽度与图像宽度的比例，有效值范围为[0.0，1.0]</string>
     <string name="pref_toast_invalid_min_face_size" translatable="false">介于0与1之间的小数</string>
 
     <!-- Strings for pose detector performance mode preference. -->
