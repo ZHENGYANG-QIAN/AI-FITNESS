@@ -316,7 +316,7 @@ public final class LivePreviewActivity extends AppCompatActivity
             Log.e(TAG, "Can not create image processor: " + model, e);
             Toast.makeText(
                             getApplicationContext(),
-                            "Can not create image processor: " + e.getMessage(),
+                            "创建图像处理器失败: " + e.getMessage(),
                             Toast.LENGTH_LONG)
                     .show();
         }
