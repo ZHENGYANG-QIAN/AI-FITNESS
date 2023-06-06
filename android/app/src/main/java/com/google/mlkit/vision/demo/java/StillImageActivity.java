@@ -96,10 +96,10 @@ public final class StillImageActivity extends AppCompatActivity {
     private static final String TEXT_RECOGNITION_JAPANESE = "日本文字检测 (Beta)";
     private static final String TEXT_RECOGNITION_KOREAN = "韩文文字检测 (Beta)";
 
-    private static final String SIZE_SCREEN = "w:screen"; // Match screen width
-    private static final String SIZE_1024_768 = "w:1024"; // ~1024*768 in a normal ratio
-    private static final String SIZE_640_480 = "w:640"; // ~640*480 in a normal ratio
-    private static final String SIZE_ORIGINAL = "w:original"; // Original image size
+    private static final String SIZE_SCREEN = "width:screen"; // Match screen width
+    private static final String SIZE_1024_768 = "width:1024"; // ~1024*768 in a normal ratio
+    private static final String SIZE_640_480 = "width:640"; // ~640*480 in a normal ratio
+    private static final String SIZE_ORIGINAL = "width:original"; // Original image size
 
     private static final String KEY_IMAGE_URI = "com.google.mlkit.vision.demo.KEY_IMAGE_URI";
     private static final String KEY_SELECTED_SIZE = "com.google.mlkit.vision.demo.KEY_SELECTED_SIZE";
