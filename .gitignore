@@ -1,1 +1,4 @@
 /venv/
+/.idea/
+/datasets/
+/__pycache__/
