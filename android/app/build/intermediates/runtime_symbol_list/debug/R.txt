@@ -990,7 +990,6 @@ int id decor_content_parent 0x7f080069
 int id default_activity_button 0x7f08006a
 int id deltaRelative 0x7f08006b
 int id dependency_ordering 0x7f08006c
-int id detector 0x7f08006d
 int id dialog_button 0x7f08006e
 int id dimensions 0x7f08006f
 int id direct 0x7f080070
@@ -1216,8 +1215,6 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_chooser 0x7f0b001c
 int layout activity_settings 0x7f0b001d
 int layout activity_still_image 0x7f0b001e
-int layout activity_vision_camerax_live_preview 0x7f0b001f
-int layout activity_vision_cameraxsource_demo 0x7f0b0020
 int layout activity_vision_live_preview 0x7f0b0021
 int layout custom_dialog 0x7f0b0022
 int layout notification_action 0x7f0b0023

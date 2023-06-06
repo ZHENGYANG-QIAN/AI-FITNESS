@@ -991,7 +991,6 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
-id detector
 id dialog_button
 id dimensions
 id direct
@@ -1217,8 +1216,6 @@ layout abc_tooltip
 layout activity_chooser
 layout activity_settings
 layout activity_still_image
-layout activity_vision_camerax_live_preview
-layout activity_vision_cameraxsource_demo
 layout activity_vision_live_preview
 layout custom_dialog
 layout notification_action
