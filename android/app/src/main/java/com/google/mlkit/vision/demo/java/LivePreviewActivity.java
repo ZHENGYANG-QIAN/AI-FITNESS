@@ -43,7 +43,6 @@ import com.google.mlkit.vision.demo.CameraSource;
 import com.google.mlkit.vision.demo.CameraSourcePreview;
 import com.google.mlkit.vision.demo.GraphicOverlay;
 import com.google.mlkit.vision.demo.R;
-import com.google.mlkit.vision.demo.java.barcodescanner.BarcodeScannerProcessor;
 import com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor;
 import com.google.mlkit.vision.demo.java.labeldetector.LabelDetectorProcessor;
 import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
@@ -74,7 +73,6 @@ public final class LivePreviewActivity extends AppCompatActivity
     private static final String CUSTOM_AUTOML_OBJECT_DETECTION =
             "自定义AutoML目标检测（花卉）";
     private static final String FACE_DETECTION = "人脸检测";
-    private static final String BARCODE_SCANNING = "条形码扫描";
     private static final String IMAGE_LABELING = "图像分类";
     private static final String IMAGE_LABELING_CUSTOM = "自定义图像分类 (鸟类)";
     private static final String CUSTOM_AUTOML_LABELING = "自定义图像分类(花卉)";
@@ -112,7 +110,6 @@ public final class LivePreviewActivity extends AppCompatActivity
         options.add(OBJECT_DETECTION_CUSTOM);
         options.add(CUSTOM_AUTOML_OBJECT_DETECTION);
         options.add(FACE_DETECTION);
-        options.add(BARCODE_SCANNING);
         options.add(IMAGE_LABELING);
         options.add(IMAGE_LABELING_CUSTOM);
         options.add(CUSTOM_AUTOML_LABELING);
@@ -210,10 +207,6 @@ public final class LivePreviewActivity extends AppCompatActivity
                 case FACE_DETECTION:
                     Log.i(TAG, "Using Face Detector Processor");
                     cameraSource.setMachineLearningFrameProcessor(new FaceDetectorProcessor(this));
-                    break;
-                case BARCODE_SCANNING:
-                    Log.i(TAG, "Using Barcode Detector Processor");
-                    cameraSource.setMachineLearningFrameProcessor(new BarcodeScannerProcessor(this));
                     break;
                 case IMAGE_LABELING:
                     Log.i(TAG, "Using Image Label Detector Processor");
