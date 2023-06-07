@@ -68,15 +68,13 @@ public final class LivePreviewActivity extends AppCompatActivity
         implements ActivityCompat.OnRequestPermissionsResultCallback,
         OnItemSelectedListener,
         CompoundButton.OnCheckedChangeListener {
+    private static final String POSE_DETECTION = "深蹲计数";
     private static final String OBJECT_DETECTION = "目标检测";
     private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
     private static final String CUSTOM_AUTOML_OBJECT_DETECTION =
             "自定义AutoML目标检测（花卉）";
     private static final String FACE_DETECTION = "人脸检测";
     private static final String IMAGE_LABELING = "图像分类";
-    private static final String IMAGE_LABELING_CUSTOM = "自定义图像分类 (鸟类)";
-    private static final String CUSTOM_AUTOML_LABELING = "自定义图像分类(花卉)";
-    private static final String POSE_DETECTION = "深蹲计数";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
 
     private static final String TAG = "LivePreviewActivity";
@@ -111,8 +109,6 @@ public final class LivePreviewActivity extends AppCompatActivity
         options.add(CUSTOM_AUTOML_OBJECT_DETECTION);
         options.add(FACE_DETECTION);
         options.add(IMAGE_LABELING);
-        options.add(IMAGE_LABELING_CUSTOM);
-        options.add(CUSTOM_AUTOML_LABELING);
         options.add(SELFIE_SEGMENTATION);
 
         // Creating adapter for spinner
@@ -176,6 +172,25 @@ public final class LivePreviewActivity extends AppCompatActivity
 
         try {
             switch (model) {
+                case POSE_DETECTION:
+                    PoseDetectorOptionsBase poseDetectorOptions =
+                            PreferenceUtils.getPoseDetectorOptionsForLivePreview(this);
+                    Log.i(TAG, "Using Pose Detector with options " + poseDetectorOptions);
+                    boolean shouldShowInFrameLikelihood =
+                            PreferenceUtils.shouldShowPoseDetectionInFrameLikelihoodLivePreview(this);
+                    boolean visualizeZ = PreferenceUtils.shouldPoseDetectionVisualizeZ(this);
+                    boolean rescaleZ = PreferenceUtils.shouldPoseDetectionRescaleZForVisualization(this);
+                    boolean runClassification = PreferenceUtils.shouldPoseDetectionRunClassification(this);
+                    cameraSource.setMachineLearningFrameProcessor(
+                            new PoseDetectorProcessor(
+                                    this,
+                                    poseDetectorOptions,
+                                    shouldShowInFrameLikelihood,
+                                    visualizeZ,
+                                    rescaleZ,
+                                    runClassification,
+                                    /* isStreamMode = */ true));
+                    break;
                 case OBJECT_DETECTION:
                     Log.i(TAG, "Using Object Detector Processor");
                     ObjectDetectorOptions objectDetectorOptions =
@@ -212,47 +227,6 @@ public final class LivePreviewActivity extends AppCompatActivity
                     Log.i(TAG, "Using Image Label Detector Processor");
                     cameraSource.setMachineLearningFrameProcessor(
                             new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS));
-                    break;
-                case IMAGE_LABELING_CUSTOM:
-                    Log.i(TAG, "Using Custom Image Label Detector Processor");
-                    LocalModel localClassifier =
-                            new LocalModel.Builder()
-                                    .setAssetFilePath("custom_models/bird_classifier.tflite")
-                                    .build();
-                    CustomImageLabelerOptions customImageLabelerOptions =
-                            new CustomImageLabelerOptions.Builder(localClassifier).build();
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new LabelDetectorProcessor(this, customImageLabelerOptions));
-                    break;
-                case CUSTOM_AUTOML_LABELING:
-                    Log.i(TAG, "Using Custom AutoML Image Label Detector Processor");
-                    LocalModel customAutoMLLabelLocalModel =
-                            new LocalModel.Builder().setAssetManifestFilePath("automl/manifest.json").build();
-                    CustomImageLabelerOptions customAutoMLLabelOptions =
-                            new CustomImageLabelerOptions.Builder(customAutoMLLabelLocalModel)
-                                    .setConfidenceThreshold(0)
-                                    .build();
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new LabelDetectorProcessor(this, customAutoMLLabelOptions));
-                    break;
-                case POSE_DETECTION:
-                    PoseDetectorOptionsBase poseDetectorOptions =
-                            PreferenceUtils.getPoseDetectorOptionsForLivePreview(this);
-                    Log.i(TAG, "Using Pose Detector with options " + poseDetectorOptions);
-                    boolean shouldShowInFrameLikelihood =
-                            PreferenceUtils.shouldShowPoseDetectionInFrameLikelihoodLivePreview(this);
-                    boolean visualizeZ = PreferenceUtils.shouldPoseDetectionVisualizeZ(this);
-                    boolean rescaleZ = PreferenceUtils.shouldPoseDetectionRescaleZForVisualization(this);
-                    boolean runClassification = PreferenceUtils.shouldPoseDetectionRunClassification(this);
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new PoseDetectorProcessor(
-                                    this,
-                                    poseDetectorOptions,
-                                    shouldShowInFrameLikelihood,
-                                    visualizeZ,
-                                    rescaleZ,
-                                    runClassification,
-                                    /* isStreamMode = */ true));
                     break;
                 case SELFIE_SEGMENTATION:
                     cameraSource.setMachineLearningFrameProcessor(new SegmenterProcessor(this));
