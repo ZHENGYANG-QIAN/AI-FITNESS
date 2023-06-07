@@ -75,8 +75,6 @@ public final class StillImageActivity extends AppCompatActivity {
 
     private static final String OBJECT_DETECTION = "目标检测";
     private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
-    private static final String CUSTOM_AUTOML_OBJECT_DETECTION =
-            "自定义AutoML目标检测（花卉）";
     private static final String FACE_DETECTION = "人脸检测";
     private static final String IMAGE_LABELING = "图像分类";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
@@ -201,7 +199,6 @@ public final class StillImageActivity extends AppCompatActivity {
         options.add(POSE_DETECTION);
         options.add(OBJECT_DETECTION);
         options.add(OBJECT_DETECTION_CUSTOM);
-        options.add(CUSTOM_AUTOML_OBJECT_DETECTION);
         options.add(FACE_DETECTION);
         options.add(IMAGE_LABELING);
         options.add(SELFIE_SEGMENTATION);
@@ -422,15 +419,6 @@ public final class StillImageActivity extends AppCompatActivity {
                     CustomObjectDetectorOptions customObjectDetectorOptions =
                             PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel);
                     imageProcessor = new ObjectDetectorProcessor(this, customObjectDetectorOptions);
-                    break;
-                case CUSTOM_AUTOML_OBJECT_DETECTION:
-                    Log.i(TAG, "Using Custom AutoML Object Detector Processor");
-                    LocalModel customAutoMLODTLocalModel =
-                            new LocalModel.Builder().setAssetManifestFilePath("automl/manifest.json").build();
-                    CustomObjectDetectorOptions customAutoMLODTOptions =
-                            PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(
-                                    this, customAutoMLODTLocalModel);
-                    imageProcessor = new ObjectDetectorProcessor(this, customAutoMLODTOptions);
                     break;
                 case FACE_DETECTION:
                     Log.i(TAG, "Using Face Detector Processor");
