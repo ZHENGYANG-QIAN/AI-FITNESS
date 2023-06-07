@@ -53,7 +53,6 @@ import com.google.mlkit.vision.demo.java.labeldetector.LabelDetectorProcessor;
 import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
 import com.google.mlkit.vision.demo.java.posedetector.PoseDetectorProcessor;
 import com.google.mlkit.vision.demo.java.segmenter.SegmenterProcessor;
-import com.google.mlkit.vision.demo.java.textdetector.TextRecognitionProcessor;
 import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.demo.preference.SettingsActivity;
 import com.google.mlkit.vision.label.custom.CustomImageLabelerOptions;
@@ -61,11 +60,6 @@ import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
 import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
 import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
-import com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions;
-import com.google.mlkit.vision.text.devanagari.DevanagariTextRecognizerOptions;
-import com.google.mlkit.vision.text.japanese.JapaneseTextRecognizerOptions;
-import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -90,11 +84,6 @@ public final class StillImageActivity extends AppCompatActivity {
     private static final String CUSTOM_AUTOML_LABELING = "自定义图像分类(花卉)";
     private static final String POSE_DETECTION = "人体关键点检测";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
-    private static final String TEXT_RECOGNITION_LATIN = "英文文字检测";
-    private static final String TEXT_RECOGNITION_CHINESE = "中文文字检测（Beta）";
-    private static final String TEXT_RECOGNITION_DEVANAGARI = "梵文文字检测 (Beta)";
-    private static final String TEXT_RECOGNITION_JAPANESE = "日本文字检测 (Beta)";
-    private static final String TEXT_RECOGNITION_KOREAN = "韩文文字检测 (Beta)";
 
     private static final String SIZE_SCREEN = "width:screen"; // Match screen width
     private static final String SIZE_1024_768 = "width:1024"; // ~1024*768 in a normal ratio
@@ -223,11 +212,6 @@ public final class StillImageActivity extends AppCompatActivity {
         options.add(CUSTOM_AUTOML_LABELING);
         options.add(POSE_DETECTION);
         options.add(SELFIE_SEGMENTATION);
-        options.add(TEXT_RECOGNITION_LATIN);
-        options.add(TEXT_RECOGNITION_CHINESE);
-        options.add(TEXT_RECOGNITION_DEVANAGARI);
-        options.add(TEXT_RECOGNITION_JAPANESE);
-        options.add(TEXT_RECOGNITION_KOREAN);
 
         // Creating adapter for featureSpinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
@@ -442,44 +426,6 @@ public final class StillImageActivity extends AppCompatActivity {
                     break;
                 case BARCODE_SCANNING:
                     imageProcessor = new BarcodeScannerProcessor(this);
-                    break;
-                case TEXT_RECOGNITION_LATIN:
-                    if (imageProcessor != null) {
-                        imageProcessor.stop();
-                    }
-                    imageProcessor =
-                            new TextRecognitionProcessor(this, new TextRecognizerOptions.Builder().build());
-                    break;
-                case TEXT_RECOGNITION_CHINESE:
-                    if (imageProcessor != null) {
-                        imageProcessor.stop();
-                    }
-                    imageProcessor =
-                            new TextRecognitionProcessor(
-                                    this, new ChineseTextRecognizerOptions.Builder().build());
-                    break;
-                case TEXT_RECOGNITION_DEVANAGARI:
-                    if (imageProcessor != null) {
-                        imageProcessor.stop();
-                    }
-                    imageProcessor =
-                            new TextRecognitionProcessor(
-                                    this, new DevanagariTextRecognizerOptions.Builder().build());
-                    break;
-                case TEXT_RECOGNITION_JAPANESE:
-                    if (imageProcessor != null) {
-                        imageProcessor.stop();
-                    }
-                    imageProcessor =
-                            new TextRecognitionProcessor(
-                                    this, new JapaneseTextRecognizerOptions.Builder().build());
-                    break;
-                case TEXT_RECOGNITION_KOREAN:
-                    if (imageProcessor != null) {
-                        imageProcessor.stop();
-                    }
-                    imageProcessor =
-                            new TextRecognitionProcessor(this, new KoreanTextRecognizerOptions.Builder().build());
                     break;
                 case IMAGE_LABELING:
                     imageProcessor = new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS);
