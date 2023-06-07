@@ -32,8 +32,11 @@ public class PoseSample {
     private static final int NUM_LANDMARKS = 33;
     private static final int NUM_DIMS = 3;
 
+    // 图片源文件名，第1列
     private final String name;
+    // 动作类名，第2列
     private final String className;
+    // 包含关键点（landmarks）的列表
     private final List<PointF3D> embedding;
 
     public PoseSample(String name, String className, List<PointF3D> landmarks) {
@@ -54,10 +57,16 @@ public class PoseSample {
         return embedding;
     }
 
+    // 用于将csv格式的字符串转换成PoseSample(name, className, landmarks)对象。
+    // 该方法接受两个参数：csvLine和separator（分隔符）。
+    // csvLine是表示样本信息的字符串，separator是字符串中用于分隔不同元素的字符。
     public static PoseSample getPoseSample(String csvLine, String separator) {
+        // 该方法首先使用Splitter.onPattern()方法将csvLine字符串转换为tokens列表。
         List<String> tokens = Splitter.onPattern(separator).splitToList(csvLine);
         // Format is expected to be Name,Class,X1,Y1,Z1,X2,Y2,Z2...
         // + 2 is for Name & Class.
+        // tokens的第一个元素是名称，第二个元素是类别名称，接下来的元素是关键点的x、y、z坐标，每个点有三个独立的坐标轴。
+        // 如果tokens数目不等于（NUM_LANDMARKS * NUM_DIMS）+2，则会记录日志并返回空值。
         if (tokens.size() != (NUM_LANDMARKS * NUM_DIMS) + 2) {
             Log.e(TAG, "Invalid number of tokens for PoseSample");
             return null;
@@ -66,6 +75,7 @@ public class PoseSample {
         String className = tokens.get(1);
         List<PointF3D> landmarks = new ArrayList<>();
         // Read from the third token, first 2 tokens are name and class.
+        // 接着，使用PointF3D.from()方法将每个坐标解析成浮点数，并将其添加到landmarks列表中。
         for (int i = 2; i < tokens.size(); i += NUM_DIMS) {
             try {
                 landmarks.add(
@@ -78,6 +88,7 @@ public class PoseSample {
                 return null;
             }
         }
+        // 最后，使用名称、类别名称和landmarks列表创建一个新的PoseSample对象。
         return new PoseSample(name, className, landmarks);
     }
 }

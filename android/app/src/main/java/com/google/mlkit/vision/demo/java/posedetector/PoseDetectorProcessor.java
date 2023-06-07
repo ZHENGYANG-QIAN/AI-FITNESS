@@ -44,16 +44,21 @@ public class PoseDetectorProcessor
         extends VisionProcessorBase<PoseDetectorProcessor.PoseWithClassification> {
     private static final String TAG = "PoseDetectorProcessor";
 
+    // 构造函数中初始化的pose检测器。
     private final PoseDetector detector;
-
     private final boolean showInFrameLikelihood;
     private final boolean visualizeZ;
     private final boolean rescaleZForVisualization;
+    // 控制是否在检测到姿势时运行分类器。
     private final boolean runClassification;
+    // 控制是否在流模式下运行分类器。
     private final boolean isStreamMode;
+    // 应用程序上下文，由构造函数设置。
     private final Context context;
+    // 单个线程执行器，用于运行分类器。
     private final Executor classificationExecutor;
 
+    // 一个姿势分类器处理器，用于在检测到姿势时运行分类器并获取分类结果。
     private PoseClassifierProcessor poseClassifierProcessor;
 
     /**
@@ -102,6 +107,11 @@ public class PoseDetectorProcessor
         detector.close();
     }
 
+    // 这是 PoseDetectorProcessor 类中一个用于检测输入图像中姿态检测和分类的方法。
+    // 它接受 InputImage 对象并返回一个 Task<PoseWithClassification> 对象，该对象包含了 pose 和 classification 结果。
+    // 在这个方法中，使用 detector.process(image)方法将输入图片传递给 pose 检测器并获取 Pose 结果。
+    // 然后，如果 runClassification 为 true，则创建一个新的 PoseClassifierProcessor 对象，将其传递给 pose 姿态检测器，并获取分类结果。
+    // 最后，将结果封装在 PoseWithClassification 对象中返回。continueWith() 方法在异步任务完成后执行，因此在此处等待任务完成并返回结果。
     @Override
     protected Task<PoseWithClassification> detectInImage(InputImage image) {
         return detector
@@ -121,6 +131,7 @@ public class PoseDetectorProcessor
                         });
     }
 
+    // 这是 PoseDetectorProcessor 类中一个用于检测MLImage对象中姿态检测和分类的方法。
     @Override
     protected Task<PoseWithClassification> detectInImage(MlImage image) {
         return detector
@@ -140,6 +151,13 @@ public class PoseDetectorProcessor
                         });
     }
 
+    // 这是 PoseDetectorProcessor 类中的一个方法，用于在成功完成检测和分类后，在图形叠加层上添加 PoseGraphic 对象来可视化姿势并显示分类结果。
+    // 该方法接受两个参数：
+    // PoseWithClassification 对象和图形重叠层对象 GraphicOverlay。
+    // 然后在 graphicOverlay 上添加一个新的 PoseGraphic 对象，该对象用于可视化检测到的姿势，并在需要时显示分类结果。
+    // PoseGraphic 对象接受多个参数，包括图形重叠层、检测到的姿势、是否显示框架可能性等，以及分类结果列表。
+    // 在PoseGraphic内部，它将利用所有给定参数来绘制出识别到的人体姿势，并显示分类结果。
+    // 此方法在成功完成检测和分类后被调用。
     @Override
     protected void onSuccess(
             @NonNull PoseWithClassification poseWithClassification,

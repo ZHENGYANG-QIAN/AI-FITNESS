@@ -37,21 +37,31 @@ import java.util.Locale;
  * Draw the detected pose in preview.
  */
 public class PoseGraphic extends Graphic {
-
+    // 绘制姿势关键点时使用的小圆点半径。
     private static final float DOT_RADIUS = 8.0f;
+    // 在绘制姿势关键点时，如果 showInFrameLikelihood 为 true，会将每个关键点的可能性以文字形式显示出来，该参数指定了显示文字的字体大小。
     private static final float IN_FRAME_LIKELIHOOD_TEXT_SIZE = 30.0f;
+    // 绘制肢体线条时使用的线宽度。
     private static final float STROKE_WIDTH = 10.0f;
+    // 在绘制姿态分类结果时，该参数指定了显示分类结果的字体大小。
     private static final float POSE_CLASSIFICATION_TEXT_SIZE = 60.0f;
-
+    // 姿势对象，包含了一个人的关键点和姿态数据。
     private final Pose pose;
+    // 是否显示每个姿势关键点的可能性。
     private final boolean showInFrameLikelihood;
+    // 是否在可视化时考虑 z 轴的信息。
     private final boolean visualizeZ;
+    // 是否按比例缩放 z 轴值以便可视化。
     private final boolean rescaleZForVisualization;
+    // 缓存 z 值最小和最大值，用于计算 z 值的范围。
     private float zMin = Float.MAX_VALUE;
     private float zMax = Float.MIN_VALUE;
 
+    // 姿态分类结果的列表。
     private final List<String> poseClassification;
+    // 用于绘制姿态分类结果的画笔。
     private final Paint classificationTextPaint;
+    // 用于绘制不同颜色的肢体线条和小圆点的画笔。
     private final Paint leftPaint;
     private final Paint rightPaint;
     private final Paint whitePaint;
@@ -87,6 +97,9 @@ public class PoseGraphic extends Graphic {
         rightPaint.setColor(Color.YELLOW);
     }
 
+    // 用于在Canvas上绘制人体姿态识别的关键点和连线的方法。
+    // 具体实现是通过调用姿态识别模型返回的Pose对象的getAllPoseLandmarks()方法获取所有的关键点，然后通过各个关键点之间的位置信息进行绘制。
+    // 代码中还包含了一些额外的功能，比如绘制关键点的可信度、绘制身体各部位的不同颜色线条、绘制人脸和手等特殊部位的线条等。
     @Override
     public void draw(Canvas canvas) {
         List<PoseLandmark> landmarks = pose.getAllPoseLandmarks();
@@ -225,6 +238,9 @@ public class PoseGraphic extends Graphic {
                 paint);
     }
 
+    // 这段代码是用于根据关键点在z轴方向上的坐标值更新绘制线条的颜色的方法。在可视化z轴坐标时，该方法会根据关键点在z轴方向上的位置将绘制线条的颜色分为红、蓝两种不同的颜色，以区分身体前后两个部分。
+    //具体实现是通过对当前关键点在图像中的z轴坐标值进行缩放得到其在屏幕中的像素值，并将该像素值按照一定的规则映射为RGB颜色值。如果关键点在z轴负半轴（即在人物前方），则使用红色渐变绘制线条；如果关键点在z轴正半轴（即在人物后方），则使用蓝色渐变绘制线条。
+    //需要注意的是，该方法还可以根据visualizeZ和rescaleZForVisualization两个参数控制是否启用z轴坐标的可视化、以及是否根据当前坐标范围自动调整颜色映射的范围。
     private void maybeUpdatePaintColor(Paint paint, Canvas canvas, float zInImagePixel) {
         if (!visualizeZ) {
             return;
