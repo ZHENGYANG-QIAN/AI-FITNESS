@@ -22,10 +22,8 @@
     <string name="pref_category_info" translatable="false">检测信息</string>
     <string name="pref_category_face_detection" translatable="false">人脸检测</string>
     <string name="pref_category_object_detection" translatable="false">目标检测</string>
-    <string name="pref_category_automl" translatable="false">AutoML图像分类</string>
     <string name="pref_category_pose_detection" translatable="false">人体姿态估计</string>
     <string name="pref_category_segmentation" translatable="false">人像抠图</string>
-    <string name="pref_category_text_recognition" translatable="false">文字识别</string>
 
     <!-- Strings for camera settings. -->
     <string name="pref_category_key_camera" translatable="false">pckc</string>
@@ -43,12 +41,6 @@
     <!-- Strings for info preference. -->
     <string name="pref_title_info_hide" translatable="false">隐藏检测信息</string>
     <string name="pref_key_info_hide" translatable="false">ih</string>
-
-    <!-- Strings for text recognition preference. -->
-    <string name="pref_title_group_recognized_text_in_blocks" translatable="false">分段显示检测文本</string>
-    <string name="pref_key_group_recognized_text_in_blocks" translatable="false">grtib</string>
-    <string name="pref_title_show_language_tag" translatable="false">显示已识别的语言</string>
-    <string name="pref_key_show_language_tag" translatable="false">slt</string>
 
     <!-- Strings for object detector enable multiple objects preference. -->
     <string name="pref_title_object_detector_enable_multiple_objects" translatable="false">多物体检测</string>
