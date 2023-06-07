@@ -265,18 +265,6 @@ public class PreferenceUtils {
         }
     }
 
-    public static boolean shouldGroupRecognizedTextInBlocks(Context context) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String prefKey = context.getString(R.string.pref_key_group_recognized_text_in_blocks);
-        return sharedPreferences.getBoolean(prefKey, false);
-    }
-
-    public static boolean showLanguageTag(Context context) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String prefKey = context.getString(R.string.pref_key_show_language_tag);
-        return sharedPreferences.getBoolean(prefKey, false);
-    }
-
     public static boolean preferGPUForPoseDetection(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         String prefKey = context.getString(R.string.pref_key_pose_detector_prefer_gpu);
