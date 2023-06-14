@@ -11,9 +11,9 @@ git clone git@github.com:ZHENGYANG-QIAN/Human-body-key-point-detection.git
 
 This repository is the implementation of the paper [BlazePose: On-device Real-time Body Pose tracking](https://arxiv.org/pdf/2006.10204v1.pdf) [1], which is a lightweight, on-device single person-specific human pose estimation model. The inference pipeline is shown in Figure 1.
 
-![11b070cb-0ae3-4ba9-9d62-196c207c33ed](README.assets\11b070cb-0ae3-4ba9-9d62-196c207c33ed.png)
+![11b070cb-0ae3-4ba9-9d62-196c207c33ed](README.assets/11b070cb-0ae3-4ba9-9d62-196c207c33ed.png)
 
-![00c94594-2eba-4522-830a-be0173b0ec63](README.assets\00c94594-2eba-4522-830a-be0173b0ec63.png)
+![00c94594-2eba-4522-830a-be0173b0ec63](README.assets/00c94594-2eba-4522-830a-be0173b0ec63.png)
 
 The code is available at: [Human-body-key-point-detection](https://github.com/1zeryu/Human-body-key-point-detection/tree/master/models).
 
