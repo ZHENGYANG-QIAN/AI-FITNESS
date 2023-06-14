@@ -1,19 +1,19 @@
-# Human-body-key-point-detection
+# AI-FITNESS
 **Project**: Fitness counter using human key point detection
 
 **Usage:**
 
 ```bash
-git clone https://github.com/1zeryu/Human-body-key-point-detection.git
+git clone git@github.com:ZHENGYANG-QIAN/Human-body-key-point-detection.git
 ```
 
 ### Human pose estimation
 
 This repository is the implementation of the paper [BlazePose: On-device Real-time Body Pose tracking](https://arxiv.org/pdf/2006.10204v1.pdf) [1], which is a lightweight, on-device single person-specific human pose estimation model. The inference pipeline is shown in Figure 1.
 
-![1659860335399](img/1659860335399.png)
+![11b070cb-0ae3-4ba9-9d62-196c207c33ed](README.assets\11b070cb-0ae3-4ba9-9d62-196c207c33ed.png)
 
-![1659860311613](img/1659860311613.png)
+![00c94594-2eba-4522-830a-be0173b0ec63](README.assets\00c94594-2eba-4522-830a-be0173b0ec63.png)
 
 The code is available at: [Human-body-key-point-detection](https://github.com/1zeryu/Human-body-key-point-detection/tree/master/models).
 
@@ -24,7 +24,7 @@ In this project, I am calling the already trained BlazePose model from mediapipe
 You can configure the required environment by:
 
 ```python
-pip install mediapipe==0.8.7.4 opencv-python numpy
+pip install mediapipe==0.9.1.0 opencv-python numpy
 ```
 
 You can click on the following links for more information:  [Pose-mediapipe](https://google.github.io/mediapipe/solutions/pose) 
@@ -36,16 +36,16 @@ For common exercise movements such as squats and push-ups, one up and one down i
 
 A common approach is to use the kNN algorithm. You can click on this URL to read the [relevant code](https://github.com/1zeryu/Human-body-key-point-detection/blob/master/models/SquatCounter.ipynb).
 
-The code here needs to be run using **Google's colab**, and you can add the required toolkit with the following code.
+You can add the required toolkit with the following code.
 
 ```python
-pip install pillow==8.1.0
-pip install matplotlib==3.3.4
-pip install numpy==1.19.3
-pip install opencv-python==4.5.1.48
-pip install tqdm==4.56.0
-pip install requests==2.25.1
-pip install mediapipe==0.8.3
+pip install opencv-python==4.7.0.72
+pip install mediapipe==0.9.1.0
+pip install matplotlib==3.7.1
+pip install numpy==1.24.2
+pip install tqdm==4.65.0
+pip install pillow==9.4.0
+pip install requests==2.28.2
 ```
 
 ### Deploy
@@ -54,7 +54,7 @@ I chose to deploy the fitness counter to **Android**,Use Google's Android applic
 
 You need to modify, debug and generate apk file in professional Android development tool - Android Studio:  [Download Android Studio & App Tools - Android Developers](https://developer.android.com/studio) 
 
-<img src="img/1659407360659.png" alt="1659407360659" style="zoom: 33%;" />
+<img src="README.assets\QQ图片20230614220914.jpg" alt="QQ图片20230614220914" style="zoom: 50%;" />
 
 ### Reference
 

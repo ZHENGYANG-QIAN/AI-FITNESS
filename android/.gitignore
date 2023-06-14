@@ -13,7 +13,7 @@ google-services.json
 
 local.properties
 
-.idea/*
+/.idea/
 !idea/codeStyles
 
 captures
