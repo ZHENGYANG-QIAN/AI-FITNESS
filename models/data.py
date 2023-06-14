@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    :   data.py
-@Time    :   2022/07/31 16:21:22
-@Author  :   ykzhou 
-@Version :   0.0
-@Contact :   ykzhou@stu.xidian.edu.cn
-@Desc    :   None
-'''
 
 import numpy as np
 import tensorflow as tf

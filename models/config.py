@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    :   config.py
-@Time    :   2022/07/31 15:08:15
-@Author  :   ykzhou 
-@Version :   0.0
-@Contact :   ykzhou@stu.xidian.edu.cn
-@Desc    :   None
-'''
 
 num_joints = 14
 batch_size = 128

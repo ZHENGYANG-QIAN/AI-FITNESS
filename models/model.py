@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    :   model.py
-@Time    :   2022/07/31 16:20:09
-@Author  :   ykzhou 
-@Version :   0.0
-@Contact :   ykzhou@stu.xidian.edu.cn
-@Desc    :   None
-'''
 
 import tensorflow as tf
 from layers import BlazeBlock

@@ -2,14 +2,6 @@ from email import header
 
 # !/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    :   layers.py
-@Time    :   2022/07/31 16:19:08
-@Author  :   ykzhou 
-@Version :   0.0
-@Contact :   ykzhou@stu.xidian.edu.cn
-@Desc    :   None
-'''
 
 import tensorflow as tf
 
