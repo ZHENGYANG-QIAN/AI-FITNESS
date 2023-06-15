@@ -55,7 +55,7 @@ public class PoseClassifier {
     private final List<PoseSample> poseSamples;
     // maxDistanceTopK和meanDistanceTopK分别是用于分类的两个K值，它们限制了在计算相似度时保留的最大样本数量。
     // 在相似度计算中：
-    // 先选出距离待分类姿势最近的MAX_DISTANCE_TOP_K个姿势样本，
+    // 先选出最大距离待分类姿势最近的MAX_DISTANCE_TOP_K个姿势样本，
     // 然后再从这些样本中选出平均距离最近的MEAN_DISTANCE_TOP_K个样本，
     // 从而获得较准确的分类结果。
     private final int maxDistanceTopK;
