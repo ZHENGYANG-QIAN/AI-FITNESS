@@ -42,6 +42,7 @@ android {
     androidResources {
         noCompress 'tflite'
     }
+    namespace 'com.google.mlkit.vision.demo'
 
     // Do NOT compress tflite model files (need to call out to developers!)
 }
