@@ -34,6 +34,12 @@ public class SettingsActivity extends AppCompatActivity {
 
     /**
      * Specifies where this activity is launched from.
+     * 这段代码定义了一个 LaunchSource 枚举类型，它包含两个成员：LIVE_PREVIEW 和 STILL_IMAGE。
+     * 每个枚举值都包含两个私有成员变量：
+     * 1.titleResId: 表示对应屏幕的标题资源 ID。
+     * 2.prefFragmentClass: 表示对应屏幕的 PreferenceFragment 类型。
+     * 每个枚举值对应一个构造函数。构造函数接收两个参数：titleResId 和 prefFragmentClass，通过这两个参数初始化枚举值对应的成员变量。
+     * 通过这种方式，可以方便地管理应用程序中可能出现的所有启动源，并准确地传递对应的信息，同时也避免了在代码中硬编码字符串和类名等容易出错的问题。
      */
     public enum LaunchSource {
         LIVE_PREVIEW(R.string.pref_screen_title_live_preview, LivePreviewPreferenceFragment.class),

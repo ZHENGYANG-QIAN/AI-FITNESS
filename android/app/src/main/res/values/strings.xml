@@ -13,6 +13,8 @@
     <string name="start_over" translatable="false">重启</string>
     <string name="menu_item_settings" translatable="false">设置</string>
     <string name="select_image" translatable="false">选择图片</string>
+    <string name="select_images_from_local" translatable="false">从相册中选择图片</string>
+    <string name="take_photo_using_camera" translatable="false">照相机</string>
     <string name="custom_object_detection" translatable="false">自定义目标检测</string>
 
     <!-- Settings related strings. -->
