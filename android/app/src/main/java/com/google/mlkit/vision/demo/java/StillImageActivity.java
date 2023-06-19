@@ -382,7 +382,9 @@ public final class StillImageActivity extends AppCompatActivity {
                             new PoseDetectorProcessor(
                                     this,
                                     /* runClassification = */ true,
-                                    /* isStreamMode = */ false);
+                                    /* isStreamMode = */ false,
+                                    "pose/fitness_pose_samples.csv",
+                                    new String[]{"squat_down", "pushup_down"});
                     break;
                 case SELFIE_SEGMENTATION:
                     imageProcessor = new SegmenterProcessor(this, /* isStreamMode= */ false);

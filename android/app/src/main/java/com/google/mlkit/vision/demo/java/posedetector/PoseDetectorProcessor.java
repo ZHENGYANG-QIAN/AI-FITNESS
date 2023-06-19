@@ -62,6 +62,10 @@ public class PoseDetectorProcessor
     // 一个姿势分类器处理器，用于在检测到姿势时运行分类器并获取分类结果。
     private PoseClassifierProcessor poseClassifierProcessor;
 
+    private String poseSamplesFile;
+
+    private String[] poseClasses;
+
     /**
      * Internal class to hold Pose and classification results.
      */
@@ -104,21 +108,24 @@ public class PoseDetectorProcessor
 
     public PoseDetectorProcessor(
             Context context,
-            PoseDetectorOptionsBase options,
-            boolean showInFrameLikelihood,
-            boolean visualizeZ,
-            boolean rescaleZForVisualization,
             boolean runClassification,
-            boolean isStreamMode) {
-        super(context);
-        this.showInFrameLikelihood = showInFrameLikelihood;
-        this.visualizeZ = visualizeZ;
-        this.rescaleZForVisualization = rescaleZForVisualization;
-        detector = PoseDetection.getClient(options);
-        this.runClassification = runClassification;
-        this.isStreamMode = isStreamMode;
-        this.context = context;
-        classificationExecutor = Executors.newSingleThreadExecutor();
+            boolean isStreamMode,
+            String poseSamplesFile,
+            String[] poseClasses) {
+        this(context, runClassification, isStreamMode);
+        this.poseSamplesFile = poseSamplesFile;
+        this.poseClasses = poseClasses;
+    }
+
+    public PoseDetectorProcessor(
+            Context context,
+            boolean runClassification,
+            boolean isStreamMode,
+            String poseSamplesFile,
+            String poseClass) {
+        this(context, runClassification, isStreamMode);
+        this.poseSamplesFile = poseSamplesFile;
+        this.poseClasses = new String[]{poseClass};
     }
 
     @Override
@@ -143,7 +150,7 @@ public class PoseDetectorProcessor
                             List<String> classificationResult = new ArrayList<>();
                             if (runClassification) {
                                 if (poseClassifierProcessor == null) {
-                                    poseClassifierProcessor = new PoseClassifierProcessor(context, isStreamMode);
+                                    poseClassifierProcessor = new PoseClassifierProcessor(context, isStreamMode, poseSamplesFile, poseClasses);
                                 }
                                 classificationResult = poseClassifierProcessor.getPoseResult(pose);
                             }
@@ -163,7 +170,7 @@ public class PoseDetectorProcessor
                             List<String> classificationResult = new ArrayList<>();
                             if (runClassification) {
                                 if (poseClassifierProcessor == null) {
-                                    poseClassifierProcessor = new PoseClassifierProcessor(context, isStreamMode);
+                                    poseClassifierProcessor = new PoseClassifierProcessor(context, isStreamMode, poseSamplesFile, poseClasses);
                                 }
                                 classificationResult = poseClassifierProcessor.getPoseResult(pose);
                             }

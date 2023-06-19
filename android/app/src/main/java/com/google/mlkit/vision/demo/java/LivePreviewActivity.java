@@ -59,6 +59,8 @@ public final class LivePreviewActivity extends AppCompatActivity
 
     private static final String POSE_DETECTION = "人体关键点检测";
     private static final String POSE_CLASSIFICATION = "健身动作分类/计数";
+    private static final String SQUAT_COUNTER = "深蹲计数";
+    private static final String JUMP_COUNTER = "开合跳计数";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
     private static final String FACE_DETECTION = "人脸检测";
 
@@ -130,6 +132,8 @@ public final class LivePreviewActivity extends AppCompatActivity
         List<String> options = new ArrayList<>();
         options.add(POSE_DETECTION);
         options.add(POSE_CLASSIFICATION);
+        options.add(SQUAT_COUNTER);
+        options.add(JUMP_COUNTER);
         options.add(SELFIE_SEGMENTATION);
         options.add(FACE_DETECTION);
 
@@ -198,7 +202,27 @@ public final class LivePreviewActivity extends AppCompatActivity
                             new PoseDetectorProcessor(
                                     this,
                                     /* runClassification =*/ true,
-                                    /* isStreamMode = */ true));
+                                    /* isStreamMode = */ true,
+                                    "pose/fitness_pose_samples.csv",
+                                    new String[]{"squat_down", "pushup_down"}));
+                    break;
+                case SQUAT_COUNTER:
+                    cameraSource.setMachineLearningFrameProcessor(
+                            new PoseDetectorProcessor(
+                                    this,
+                                    /* runClassification =*/ true,
+                                    /* isStreamMode = */ true,
+                                    "pose/squat_csvs_out_basic.csv",
+                                    "squat_down"));
+                    break;
+                case JUMP_COUNTER:
+                    cameraSource.setMachineLearningFrameProcessor(
+                            new PoseDetectorProcessor(
+                                    this,
+                                    /* runClassification =*/ true,
+                                    /* isStreamMode = */ true,
+                                    "pose/jump_csvs_out_basic.csv",
+                                    "jump_close"));
                     break;
                 case SELFIE_SEGMENTATION:
                     cameraSource.setMachineLearningFrameProcessor(new SegmenterProcessor(this));

@@ -43,16 +43,18 @@ import java.util.Locale;
 // 这个处理器是根据指定的POSE_SAMPLES_FILE对姿势进行分类，其中包含一组示例姿势的CSV文件。
 public class PoseClassifierProcessor {
     private static final String TAG = "PoseClassifierProcessor";
-    private static final String POSE_SAMPLES_FILE = "pose/fitness_pose_samples.csv";
+//    private static final String POSE_SAMPLES_FILE = "pose/fitness_pose_samples.csv";
+//    // Specify classes for which we want rep counting.
+//    // These are the labels in the given {@code POSE_SAMPLES_FILE}. You can set your own class labels
+//    // for your pose samples.
+//    private static final String PUSHUPS_CLASS = "pushups_down";
+//    private static final String SQUATS_CLASS = "squats_down";
+//    private static final String[] POSE_CLASSES = {
+//            PUSHUPS_CLASS, SQUATS_CLASS
+//    };
 
-    // Specify classes for which we want rep counting.
-    // These are the labels in the given {@code POSE_SAMPLES_FILE}. You can set your own class labels
-    // for your pose samples.
-    private static final String PUSHUPS_CLASS = "pushups_down";
-    private static final String SQUATS_CLASS = "squats_down";
-    private static final String[] POSE_CLASSES = {
-            PUSHUPS_CLASS, SQUATS_CLASS
-    };
+    private final String poseSamplesFile;
+    private final String[] poseClasses;
 
     private final boolean isStreamMode;
 
@@ -66,7 +68,7 @@ public class PoseClassifierProcessor {
     private String lastRepResult;
 
     @WorkerThread
-    public PoseClassifierProcessor(Context context, boolean isStreamMode) {
+    public PoseClassifierProcessor(Context context, boolean isStreamMode, String poseSamplesFile, String[] poseClasses) {
         // 首先使用Preconditions.checkState（）方法检查当前线程不是UI线程
         Preconditions.checkState(Looper.myLooper() != Looper.getMainLooper());
         this.isStreamMode = isStreamMode;
@@ -75,6 +77,8 @@ public class PoseClassifierProcessor {
             repCounters = new ArrayList<>();
             lastRepResult = "";
         }
+        this.poseSamplesFile = poseSamplesFile;
+        this.poseClasses = poseClasses;
         loadPoseSamples(context);
     }
 
@@ -83,7 +87,7 @@ public class PoseClassifierProcessor {
         try {
             // 使用BufferedReader从文件中逐行读取csv文件，并将每一行转换为PoseSample对象
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(context.getAssets().open(POSE_SAMPLES_FILE)));
+                    new InputStreamReader(context.getAssets().open(poseSamplesFile)));
             String csvLine = reader.readLine();
             while (csvLine != null) {
                 // If line is not a valid {@link PoseSample}, we'll get null and skip adding to the list.
@@ -100,7 +104,7 @@ public class PoseClassifierProcessor {
         poseClassifier = new PoseClassifier(poseSamples);
         // 如果isStreamMode为true，则为POSE_CLASSES数组中的每个类别创建一个重复计数器（RepetitionCounter）并将其添加到repCounters数组中。
         if (isStreamMode) {
-            for (String className : POSE_CLASSES) {
+            for (String className : poseClasses) {
                 repCounters.add(new RepetitionCounter(className));
             }
         }
