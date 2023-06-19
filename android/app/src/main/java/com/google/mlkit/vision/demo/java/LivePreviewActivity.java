@@ -26,7 +26,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -67,6 +66,7 @@ public final class LivePreviewActivity extends AppCompatActivity
     private static final String TAG = "LivePreviewActivity";
 
     private static final String POSE_DETECTION = "人体关键点检测";
+    private static final String POSE_CLASSIFICATION = "健身动作分类/计数";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
     private static final String FACE_DETECTION = "人脸检测";
     private static final String OBJECT_DETECTION = "目标检测";
@@ -140,6 +140,7 @@ public final class LivePreviewActivity extends AppCompatActivity
         Spinner spinner = findViewById(R.id.spinner);
         List<String> options = new ArrayList<>();
         options.add(POSE_DETECTION);
+        options.add(POSE_CLASSIFICATION);
         options.add(SELFIE_SEGMENTATION);
         options.add(FACE_DETECTION);
         options.add(OBJECT_DETECTION);
@@ -200,22 +201,17 @@ public final class LivePreviewActivity extends AppCompatActivity
         try {
             switch (model) {
                 case POSE_DETECTION:
-                    PoseDetectorOptionsBase poseDetectorOptions =
-                            PreferenceUtils.getPoseDetectorOptionsForLivePreview(this);
-                    Log.i(TAG, "Using Pose Detector with options " + poseDetectorOptions);
-                    boolean shouldShowInFrameLikelihood =
-                            PreferenceUtils.shouldShowPoseDetectionInFrameLikelihoodLivePreview(this);
-                    boolean visualizeZ = PreferenceUtils.shouldPoseDetectionVisualizeZ(this);
-                    boolean rescaleZ = PreferenceUtils.shouldPoseDetectionRescaleZForVisualization(this);
-                    boolean runClassification = PreferenceUtils.shouldPoseDetectionRunClassification(this);
                     cameraSource.setMachineLearningFrameProcessor(
                             new PoseDetectorProcessor(
                                     this,
-                                    poseDetectorOptions,
-                                    shouldShowInFrameLikelihood,
-                                    visualizeZ,
-                                    rescaleZ,
-                                    runClassification,
+                                    /* runClassification =*/ false,
+                                    /* isStreamMode = */ true));
+                    break;
+                case POSE_CLASSIFICATION:
+                    cameraSource.setMachineLearningFrameProcessor(
+                            new PoseDetectorProcessor(
+                                    this,
+                                    /* runClassification =*/ true,
                                     /* isStreamMode = */ true));
                     break;
                 case SELFIE_SEGMENTATION:

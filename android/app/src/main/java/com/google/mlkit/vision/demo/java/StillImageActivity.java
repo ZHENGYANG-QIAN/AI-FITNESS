@@ -71,6 +71,7 @@ public final class StillImageActivity extends AppCompatActivity {
     private static final String TAG = "StillImageActivity";
 
     private static final String POSE_DETECTION = "人体关键点检测";
+    private static final String POSE_CLASSIFICATION = "健身动作分类";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
     private static final String FACE_DETECTION = "人脸检测";
     private static final String OBJECT_DETECTION = "目标检测";
@@ -194,6 +195,7 @@ public final class StillImageActivity extends AppCompatActivity {
         Spinner featureSpinner = findViewById(R.id.feature_selector);
         List<String> options = new ArrayList<>();
         options.add(POSE_DETECTION);
+        options.add(POSE_CLASSIFICATION);
         options.add(SELFIE_SEGMENTATION);
         options.add(FACE_DETECTION);
         options.add(OBJECT_DETECTION);
@@ -383,22 +385,17 @@ public final class StillImageActivity extends AppCompatActivity {
         try {
             switch (selectedMode) {
                 case POSE_DETECTION:
-                    PoseDetectorOptionsBase poseDetectorOptions =
-                            PreferenceUtils.getPoseDetectorOptionsForStillImage(this);
-                    Log.i(TAG, "Using Pose Detector with options " + poseDetectorOptions);
-                    boolean shouldShowInFrameLikelihood =
-                            PreferenceUtils.shouldShowPoseDetectionInFrameLikelihoodStillImage(this);
-                    boolean visualizeZ = PreferenceUtils.shouldPoseDetectionVisualizeZ(this);
-                    boolean rescaleZ = PreferenceUtils.shouldPoseDetectionRescaleZForVisualization(this);
-                    boolean runClassification = PreferenceUtils.shouldPoseDetectionRunClassification(this);
                     imageProcessor =
                             new PoseDetectorProcessor(
                                     this,
-                                    poseDetectorOptions,
-                                    shouldShowInFrameLikelihood,
-                                    visualizeZ,
-                                    rescaleZ,
-                                    runClassification,
+                                    /* runClassification = */ false,
+                                    /* isStreamMode = */ false);
+                    break;
+                case POSE_CLASSIFICATION:
+                    imageProcessor =
+                            new PoseDetectorProcessor(
+                                    this,
+                                    /* runClassification = */ true,
                                     /* isStreamMode = */ false);
                     break;
                 case SELFIE_SEGMENTATION:

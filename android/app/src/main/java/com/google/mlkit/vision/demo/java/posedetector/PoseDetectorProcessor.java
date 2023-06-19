@@ -27,6 +27,7 @@ import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.demo.GraphicOverlay;
 import com.google.mlkit.vision.demo.java.VisionProcessorBase;
 import com.google.mlkit.vision.demo.java.posedetector.classification.PoseClassifierProcessor;
+import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.pose.Pose;
 import com.google.mlkit.vision.pose.PoseDetection;
 import com.google.mlkit.vision.pose.PoseDetector;
@@ -80,6 +81,25 @@ public class PoseDetectorProcessor
         public List<String> getClassificationResult() {
             return classificationResult;
         }
+    }
+
+    public PoseDetectorProcessor(
+            Context context,
+            boolean runClassification,
+            boolean isStreamMode) {
+        super(context);
+        PoseDetectorOptionsBase options =
+                PreferenceUtils.getPoseDetectorOptionsForLivePreview(context);
+        Log.i(TAG, "Using Pose Detector with options " + options);
+        this.showInFrameLikelihood =
+                PreferenceUtils.shouldShowPoseDetectionInFrameLikelihoodLivePreview(context);
+        this.visualizeZ = PreferenceUtils.shouldPoseDetectionVisualizeZ(context);
+        this.rescaleZForVisualization = PreferenceUtils.shouldPoseDetectionRescaleZForVisualization(context);
+        detector = PoseDetection.getClient(options);
+        this.runClassification = runClassification;
+        this.isStreamMode = isStreamMode;
+        this.context = context;
+        classificationExecutor = Executors.newSingleThreadExecutor();
     }
 
     public PoseDetectorProcessor(
