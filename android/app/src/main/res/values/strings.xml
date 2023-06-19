@@ -7,7 +7,8 @@
     <string name="low_storage_error" translatable="false">设备存储空间不足，无法下载面部检测器的依赖项</string>
     <string name="toggle_turn_on" translatable="false">Front</string>
     <string name="toggle_turn_off" translatable="false">Back</string>
-    <string name="desc_camera_source_activity" translatable="false">动态模式（需使用摄像头）</string>
+    <string name="desc_camera_source_activity" translatable="false">动态模式（调用摄像头）</string>
+<!--    <string name="desc_video_activity" translatable="false">动态模式（处理视频）</string>-->
     <string name="desc_still_image_activity" translatable="false">静态模式</string>
     <string name="download_error" translatable="false">下载错误</string>
     <string name="start_over" translatable="false">重启</string>

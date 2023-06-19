@@ -12,6 +12,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 import sys
 
+from PyQt5.QtGui import QFontDatabase
+from matplotlib.font_manager import FontProperties
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -28,7 +30,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.textBrowser.setGeometry(QtCore.QRect(340, 200, 1500, 100))
         self.textBrowser.setObjectName("textBrowser")
         self.textBrowser.setStyleSheet(
-            '''QTextBrowser{background:rgb(255, 255, 255, 250);border-radius:10px;font-family:华文行楷;color:black;font-size:25px;}QTextBrowser:hover\n
+            '''QTextBrowser{background:rgb(255, 255, 255, 250);border-radius:10px;font-family:font;color:black;font-size:25px;}QTextBrowser:hover\n
             {background:rgb(255, 255, 255, 250);}''')
 
         self.labelcamera = QtWidgets.QLabel(MainWindow)
@@ -42,50 +44,32 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                                     "color:black;\n"
                                     "font-size:50px;")
         self.label_title.setObjectName("label_title")
-        self.pushButton_squat = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_squat.setGeometry(QtCore.QRect(70, 440,210, 80))
-        self.pushButton_squat.setStyleSheet(
+        self.pushButton_point = QtWidgets.QPushButton(MainWindow)
+        self.pushButton_point.setGeometry(QtCore.QRect(70, 440,210, 80))
+        self.pushButton_point.setStyleSheet(
             '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
             {background:rgb(255, 255, 255, 250);}''')
-        self.pushButton_squat.setObjectName("pushButton_squat")
-        self.pushButton_jump = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_jump.setGeometry(QtCore.QRect(70, 260, 210, 80))
-        self.pushButton_jump.setStyleSheet(
+        self.pushButton_point.setObjectName("pushButton_point")
+        self.pushButton_number = QtWidgets.QPushButton(MainWindow)
+        self.pushButton_number.setGeometry(QtCore.QRect(70, 260, 210, 80))
+        self.pushButton_number.setStyleSheet(
             '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
             {background:rgb(255, 255, 255, 250);}''')
-        self.pushButton_jump.setObjectName("label_9")
-        self.pushButton_curl = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_curl.setGeometry(QtCore.QRect(70, 350, 210, 80))
-        self.pushButton_curl.setStyleSheet(
-            '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
-            {background:rgb(255, 255, 255, 250);}''')
-        self.pushButton_curl.setObjectName("label_10")
-        self.pushButton_pullup = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_pullup.setGeometry(QtCore.QRect(70, 530, 210, 80))
-        self.pushButton_pullup.setStyleSheet(
-            '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
-            {background:rgb(255, 255, 255, 250);}''')
-        self.pushButton_pullup.setObjectName("pushButton_pullup")
+        self.pushButton_number.setObjectName("pushButton_number")
         self.pushButton_stop = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_stop.setGeometry(QtCore.QRect(70, 620, 210, 80))
+        self.pushButton_stop.setGeometry(QtCore.QRect(70, 530, 210, 80))
         self.pushButton_stop.setStyleSheet(
             '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
             {background:rgb(255, 255, 255, 250);}''')
         self.pushButton_stop.setObjectName("pushButton_stop")
         self.pushButton_clean = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_clean.setGeometry(QtCore.QRect(70, 710, 210, 80))
+        self.pushButton_clean.setGeometry(QtCore.QRect(70, 620, 210, 80))
         self.pushButton_clean.setStyleSheet(
             '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
             {background:rgb(255, 255, 255, 250);}''')
         self.pushButton_clean.setObjectName("pushButton_clean")
-        self.pushButton_picture = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_picture.setGeometry(QtCore.QRect(70, 800, 210, 80))
-        self.pushButton_picture.setStyleSheet(
-            '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
-            {background:rgb(255, 255, 255, 250);}''')
-        self.pushButton_picture.setObjectName("pushButton_picture")
         self.pushButton_video = QtWidgets.QPushButton(MainWindow)
-        self.pushButton_video.setGeometry(QtCore.QRect(70, 890, 210, 80))
+        self.pushButton_video.setGeometry(QtCore.QRect(70, 350, 210, 80))
         self.pushButton_video.setStyleSheet(
             '''QPushButton{background:rgb(255, 255, 255, 60);border-radius:5px;font-family:华文行楷;color:black;font-size:30px;}QPushButton:hover\n
             {background:rgb(255, 255, 255, 250);}''')
@@ -122,17 +106,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "健身计数应用"))
         self.label_title.setText(_translate("Form", "健身计数应用"))
-        self.pushButton_squat.setText(_translate("Form", "深蹲检测"))
-        self.pushButton_jump.setText(_translate("Form", "开合跳检测"))
-        self.pushButton_curl.setText(_translate("Form", "仰卧起坐检测"))
+        self.pushButton_point.setText(_translate("Form", "关键点检测"))
+        self.pushButton_number.setText(_translate("Form", "实时健身计数"))
         self.label_out.setText(_translate("Form", "输出信息"))
         self.label_cam.setText(_translate("Form", "实时监测"))
-        self.pushButton_pullup.setText(_translate("Form", "俯卧撑检测"))
-        self.pushButton_stop.setText(_translate("Form", "停止计数"))
+        self.pushButton_stop.setText(_translate("Form", "停止检测"))
         self.pushButton_clean.setText(_translate("Form", "清空输出"))
         self.pushButton_readme.setText(_translate("Form", "使用说明"))
-        self.pushButton_picture.setText(_translate("Form", "图片识别"))
-        self.pushButton_video.setText(_translate("Form", "视频识别"))
+        self.pushButton_video.setText(_translate("Form", "视频健身计数"))
 
     def mousePressEvent(self, e):
         if e.button() == Qt.LeftButton:
