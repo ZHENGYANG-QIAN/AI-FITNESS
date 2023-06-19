@@ -36,22 +36,14 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.common.annotation.KeepName;
-import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.demo.CameraSource;
 import com.google.mlkit.vision.demo.CameraSourcePreview;
 import com.google.mlkit.vision.demo.GraphicOverlay;
 import com.google.mlkit.vision.demo.R;
 import com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor;
-import com.google.mlkit.vision.demo.java.labeldetector.LabelDetectorProcessor;
-import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
 import com.google.mlkit.vision.demo.java.posedetector.PoseDetectorProcessor;
 import com.google.mlkit.vision.demo.java.segmenter.SegmenterProcessor;
-import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.demo.preference.SettingsActivity;
-import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
-import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
-import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -69,9 +61,6 @@ public final class LivePreviewActivity extends AppCompatActivity
     private static final String POSE_CLASSIFICATION = "健身动作分类/计数";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
     private static final String FACE_DETECTION = "人脸检测";
-    private static final String OBJECT_DETECTION = "目标检测";
-    private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
-    private static final String IMAGE_LABELING = "图像分类";
 
     private static final int PERMISSION_REQUESTS = 1;
 
@@ -143,9 +132,6 @@ public final class LivePreviewActivity extends AppCompatActivity
         options.add(POSE_CLASSIFICATION);
         options.add(SELFIE_SEGMENTATION);
         options.add(FACE_DETECTION);
-        options.add(OBJECT_DETECTION);
-        options.add(OBJECT_DETECTION_CUSTOM);
-        options.add(IMAGE_LABELING);
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
@@ -220,29 +206,6 @@ public final class LivePreviewActivity extends AppCompatActivity
                 case FACE_DETECTION:
                     Log.i(TAG, "Using Face Detector Processor");
                     cameraSource.setMachineLearningFrameProcessor(new FaceDetectorProcessor(this));
-                    break;
-                case OBJECT_DETECTION:
-                    Log.i(TAG, "Using Object Detector Processor");
-                    ObjectDetectorOptions objectDetectorOptions =
-                            PreferenceUtils.getObjectDetectorOptionsForLivePreview(this);
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new ObjectDetectorProcessor(this, objectDetectorOptions));
-                    break;
-                case OBJECT_DETECTION_CUSTOM:
-                    Log.i(TAG, "Using Custom Object Detector Processor");
-                    LocalModel localModel =
-                            new LocalModel.Builder()
-                                    .setAssetFilePath("custom_models/object_labeler.tflite")
-                                    .build();
-                    CustomObjectDetectorOptions customObjectDetectorOptions =
-                            PreferenceUtils.getCustomObjectDetectorOptionsForLivePreview(this, localModel);
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new ObjectDetectorProcessor(this, customObjectDetectorOptions));
-                    break;
-                case IMAGE_LABELING:
-                    Log.i(TAG, "Using Image Label Detector Processor");
-                    cameraSource.setMachineLearningFrameProcessor(
-                            new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS));
                     break;
                 default:
                     Log.e(TAG, "Unknown model: " + model);

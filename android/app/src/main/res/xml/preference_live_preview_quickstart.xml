@@ -110,19 +110,6 @@
             android:title="@string/pref_title_face_detector_min_face_size" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/pref_category_object_detection">
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/pref_key_live_preview_object_detector_enable_multiple_objects"
-            android:persistent="true"
-            android:title="@string/pref_title_object_detector_enable_multiple_objects" />
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/pref_key_live_preview_object_detector_enable_classification"
-            android:persistent="true"
-            android:title="@string/pref_title_object_detector_enable_classification" />
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/pref_category_info">
         <SwitchPreference
             android:defaultValue="false"

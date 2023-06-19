@@ -15,7 +15,6 @@
     <string name="select_image" translatable="false">选择图片</string>
     <string name="select_images_from_local" translatable="false">从相册中选择图片</string>
     <string name="take_photo_using_camera" translatable="false">照相机</string>
-    <string name="custom_object_detection" translatable="false">自定义目标检测</string>
 
     <!-- Settings related strings. -->
     <string name="pref_screen" translatable="false">pc</string>
@@ -43,16 +42,6 @@
     <!-- Strings for info preference. -->
     <string name="pref_title_info_hide" translatable="false">隐藏检测信息</string>
     <string name="pref_key_info_hide" translatable="false">ih</string>
-
-    <!-- Strings for object detector enable multiple objects preference. -->
-    <string name="pref_title_object_detector_enable_multiple_objects" translatable="false">多物体检测</string>
-    <string name="pref_key_live_preview_object_detector_enable_multiple_objects" translatable="false">lpodemo</string>
-    <string name="pref_key_still_image_object_detector_enable_multiple_objects" translatable="false">siodemo</string>
-
-    <!-- Strings for object detector enable classification preference. -->
-    <string name="pref_title_object_detector_enable_classification" translatable="false">开启分类</string>
-    <string name="pref_key_live_preview_object_detector_enable_classification" translatable="false">lpodec</string>
-    <string name="pref_key_still_image_object_detector_enable_classification" translatable="false">siodec</string>
 
     <!-- Strings for face detector landmark mode preference. -->
     <string name="pref_title_face_detector_landmark_mode" translatable="false">关键点模式</string>

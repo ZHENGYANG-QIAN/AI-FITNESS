@@ -41,22 +41,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.common.annotation.KeepName;
-import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.demo.BitmapUtils;
 import com.google.mlkit.vision.demo.GraphicOverlay;
 import com.google.mlkit.vision.demo.R;
 import com.google.mlkit.vision.demo.VisionImageProcessor;
 import com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor;
-import com.google.mlkit.vision.demo.java.labeldetector.LabelDetectorProcessor;
-import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
 import com.google.mlkit.vision.demo.java.posedetector.PoseDetectorProcessor;
 import com.google.mlkit.vision.demo.java.segmenter.SegmenterProcessor;
-import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.demo.preference.SettingsActivity;
-import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
-import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
-import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -74,9 +66,6 @@ public final class StillImageActivity extends AppCompatActivity {
     private static final String POSE_CLASSIFICATION = "健身动作分类";
     private static final String SELFIE_SEGMENTATION = "人像抠图";
     private static final String FACE_DETECTION = "人脸检测";
-    private static final String OBJECT_DETECTION = "目标检测";
-    private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
-    private static final String IMAGE_LABELING = "图像分类";
     private static final String SIZE_SCREEN = "width:screen"; // Match screen width
     private static final String SIZE_1024_768 = "width:1024"; // ~1024*768 in a normal ratio
     private static final String SIZE_640_480 = "width:640"; // ~640*480 in a normal ratio
@@ -198,9 +187,6 @@ public final class StillImageActivity extends AppCompatActivity {
         options.add(POSE_CLASSIFICATION);
         options.add(SELFIE_SEGMENTATION);
         options.add(FACE_DETECTION);
-        options.add(OBJECT_DETECTION);
-        options.add(OBJECT_DETECTION_CUSTOM);
-        options.add(IMAGE_LABELING);
 
         // Creating adapter for featureSpinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
@@ -404,25 +390,6 @@ public final class StillImageActivity extends AppCompatActivity {
                 case FACE_DETECTION:
                     Log.i(TAG, "Using Face Detector Processor");
                     imageProcessor = new FaceDetectorProcessor(this);
-                    break;
-                case OBJECT_DETECTION:
-                    Log.i(TAG, "Using Object Detector Processor");
-                    ObjectDetectorOptions objectDetectorOptions =
-                            PreferenceUtils.getObjectDetectorOptionsForStillImage(this);
-                    imageProcessor = new ObjectDetectorProcessor(this, objectDetectorOptions);
-                    break;
-                case OBJECT_DETECTION_CUSTOM:
-                    Log.i(TAG, "Using Custom Object Detector Processor");
-                    LocalModel localModel =
-                            new LocalModel.Builder()
-                                    .setAssetFilePath("custom_models/object_labeler.tflite")
-                                    .build();
-                    CustomObjectDetectorOptions customObjectDetectorOptions =
-                            PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel);
-                    imageProcessor = new ObjectDetectorProcessor(this, customObjectDetectorOptions);
-                    break;
-                case IMAGE_LABELING:
-                    imageProcessor = new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS);
                     break;
                 default:
                     Log.e(TAG, "Unknown selectedMode: " + selectedMode);
