@@ -204,7 +204,7 @@ public final class LivePreviewActivity extends AppCompatActivity
                                     /* runClassification =*/ true,
                                     /* isStreamMode = */ true,
                                     "pose/fitness_pose_samples.csv",
-                                    new String[]{"squat_down", "pushup_down"}));
+                                    new String[]{"squat_down", "pushup_down", "jump_close"}));
                     break;
                 case SQUAT_COUNTER:
                     cameraSource.setMachineLearningFrameProcessor(

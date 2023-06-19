@@ -927,7 +927,7 @@ def videopointprocess():
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     filehead = file_path1.split('/')[-1]
     # output_path = "Point-out-" + filehead + '.mp4'
-    output_path = filehead + "out-point"
+    output_path = "point-out" + filehead
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height), isColor=True)
     while video_cap.isOpened() & i == 0:
         success, img = video_cap.read()
@@ -1045,7 +1045,7 @@ def videonumberprocess(pose_samples_folder, class_name):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     filehead = file_path1.split('/')[-1]
     # output_path = "Count-out-" + filehead + '.mp4'
-    output_path = filehead + "-out-count"
+    output_path = "count-out-" + filehead
     out = cv2.VideoWriter(output_path, fourcc, fps, (new_width, new_height), isColor=True)
     while video_cap.isOpened() & i == 0:
         # get next frame of the video
