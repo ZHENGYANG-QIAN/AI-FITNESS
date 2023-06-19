@@ -90,6 +90,6 @@ public class InferenceInfoGraphic extends GraphicOverlay.Graphic {
             canvas.drawText("Frame latency: " + frameLatency + " ms", x, y + TEXT_SIZE, textPaint);
         }
         canvas.drawText(
-                "USTC CV", x, y + TEXT_SIZE * 2, textPaint);
+                "AI FITNESS", x, y + TEXT_SIZE * 2, textPaint);
     }
 }

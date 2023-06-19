@@ -23,7 +23,7 @@
     <application
         android:name="androidx.multidex.MultiDexApplication"
         android:icon="@drawable/ustc"
-        android:label="USTC CV"
+        android:label="AI FITNESS"
         android:theme="@style/Theme.AppCompat">
 
         <meta-data

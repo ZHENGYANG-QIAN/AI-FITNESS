@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">USTC CV</string>
+    <string name="app_name" translatable="false">AI FITNESS</string>
     <string name="ok" translatable="false">OK</string>
     <string name="permission_camera_rationale" translatable="false">需要摄像头权限进行检测</string>
     <string name="no_camera_permission" translatable="false">相机权限未开启，程序无法运行，即将退出</string>
