@@ -69,14 +69,13 @@ import java.util.List;
 public final class StillImageActivity extends AppCompatActivity {
 
     private static final String TAG = "StillImageActivity";
-    private static final String POSE_DETECTION = "人体关键点检测";
 
+    private static final String POSE_DETECTION = "人体关键点检测";
+    private static final String SELFIE_SEGMENTATION = "人像抠图";
+    private static final String FACE_DETECTION = "人脸检测";
     private static final String OBJECT_DETECTION = "目标检测";
     private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
-    private static final String FACE_DETECTION = "人脸检测";
     private static final String IMAGE_LABELING = "图像分类";
-    private static final String SELFIE_SEGMENTATION = "人像抠图";
-
     private static final String SIZE_SCREEN = "width:screen"; // Match screen width
     private static final String SIZE_1024_768 = "width:1024"; // ~1024*768 in a normal ratio
     private static final String SIZE_640_480 = "width:640"; // ~640*480 in a normal ratio
@@ -90,7 +89,7 @@ public final class StillImageActivity extends AppCompatActivity {
 
     private ImageView preview;
     private GraphicOverlay graphicOverlay;
-    private String selectedMode = OBJECT_DETECTION;
+    private String selectedMode = POSE_DETECTION;
     private String selectedSize = SIZE_SCREEN;
 
     boolean isLandScape;
@@ -195,11 +194,11 @@ public final class StillImageActivity extends AppCompatActivity {
         Spinner featureSpinner = findViewById(R.id.feature_selector);
         List<String> options = new ArrayList<>();
         options.add(POSE_DETECTION);
+        options.add(SELFIE_SEGMENTATION);
+        options.add(FACE_DETECTION);
         options.add(OBJECT_DETECTION);
         options.add(OBJECT_DETECTION_CUSTOM);
-        options.add(FACE_DETECTION);
         options.add(IMAGE_LABELING);
-        options.add(SELFIE_SEGMENTATION);
 
         // Creating adapter for featureSpinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
@@ -402,6 +401,13 @@ public final class StillImageActivity extends AppCompatActivity {
                                     runClassification,
                                     /* isStreamMode = */ false);
                     break;
+                case SELFIE_SEGMENTATION:
+                    imageProcessor = new SegmenterProcessor(this, /* isStreamMode= */ false);
+                    break;
+                case FACE_DETECTION:
+                    Log.i(TAG, "Using Face Detector Processor");
+                    imageProcessor = new FaceDetectorProcessor(this);
+                    break;
                 case OBJECT_DETECTION:
                     Log.i(TAG, "Using Object Detector Processor");
                     ObjectDetectorOptions objectDetectorOptions =
@@ -418,15 +424,8 @@ public final class StillImageActivity extends AppCompatActivity {
                             PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel);
                     imageProcessor = new ObjectDetectorProcessor(this, customObjectDetectorOptions);
                     break;
-                case FACE_DETECTION:
-                    Log.i(TAG, "Using Face Detector Processor");
-                    imageProcessor = new FaceDetectorProcessor(this);
-                    break;
                 case IMAGE_LABELING:
                     imageProcessor = new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS);
-                    break;
-                case SELFIE_SEGMENTATION:
-                    imageProcessor = new SegmenterProcessor(this, /* isStreamMode= */ false);
                     break;
                 default:
                     Log.e(TAG, "Unknown selectedMode: " + selectedMode);

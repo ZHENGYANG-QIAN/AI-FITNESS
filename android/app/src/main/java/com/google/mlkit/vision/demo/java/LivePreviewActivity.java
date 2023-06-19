@@ -63,23 +63,22 @@ import java.util.List;
  */
 @KeepName
 public final class LivePreviewActivity extends AppCompatActivity
-        implements ActivityCompat.OnRequestPermissionsResultCallback,
-        OnItemSelectedListener,
-        CompoundButton.OnCheckedChangeListener {
-    private static final String POSE_DETECTION = "深蹲计数";
+        implements ActivityCompat.OnRequestPermissionsResultCallback {
+    private static final String TAG = "LivePreviewActivity";
+
+    private static final String POSE_DETECTION = "人体关键点检测";
+    private static final String SELFIE_SEGMENTATION = "人像抠图";
+    private static final String FACE_DETECTION = "人脸检测";
     private static final String OBJECT_DETECTION = "目标检测";
     private static final String OBJECT_DETECTION_CUSTOM = "自定义目标检测";
-    private static final String FACE_DETECTION = "人脸检测";
     private static final String IMAGE_LABELING = "图像分类";
-    private static final String SELFIE_SEGMENTATION = "人像抠图";
 
-    private static final String TAG = "LivePreviewActivity";
     private static final int PERMISSION_REQUESTS = 1;
 
     private CameraSource cameraSource = null;
     private CameraSourcePreview preview;
     private GraphicOverlay graphicOverlay;
-    private String selectedModel = OBJECT_DETECTION;
+    private String selectedMode = POSE_DETECTION;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,25 +96,8 @@ public final class LivePreviewActivity extends AppCompatActivity
             Log.d(TAG, "graphicOverlay is null");
         }
 
-        Spinner spinner = findViewById(R.id.spinner);
-        List<String> options = new ArrayList<>();
-        options.add(POSE_DETECTION);
-        options.add(OBJECT_DETECTION);
-        options.add(OBJECT_DETECTION_CUSTOM);
-        options.add(FACE_DETECTION);
-        options.add(IMAGE_LABELING);
-        options.add(SELFIE_SEGMENTATION);
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
-        // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // attaching data adapter to spinner
-        spinner.setAdapter(dataAdapter);
-        spinner.setOnItemSelectedListener(this);
-
-        ToggleButton facingSwitch = findViewById(R.id.facing_switch);
-        facingSwitch.setOnCheckedChangeListener(this);
+        populateFeatureSelector();
+        populateFaceSwitch();
 
         ImageView settingsButton = findViewById(R.id.settings_button);
         settingsButton.setOnClickListener(
@@ -126,37 +108,87 @@ public final class LivePreviewActivity extends AppCompatActivity
                     startActivity(intent);
                 });
 
-        createCameraSource(selectedModel);
+        createCameraSource(selectedMode);
     }
 
     @Override
-    public synchronized void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-        selectedModel = parent.getItemAtPosition(pos).toString();
-        Log.d(TAG, "Selected model: " + selectedModel);
-        preview.stop();
-        createCameraSource(selectedModel);
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+        createCameraSource(selectedMode);
         startCameraSource();
     }
 
+    /**
+     * Stops the camera.
+     */
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Do nothing.
+    protected void onPause() {
+        super.onPause();
+        preview.stop();
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        Log.d(TAG, "Set facing");
+    public void onDestroy() {
+        super.onDestroy();
         if (cameraSource != null) {
-            if (isChecked) {
-                cameraSource.setFacing(CameraSource.CAMERA_FACING_FRONT);
-            } else {
-                cameraSource.setFacing(CameraSource.CAMERA_FACING_BACK);
-            }
+            cameraSource.release();
         }
-        preview.stop();
-        startCameraSource();
+    }
+
+    private void populateFeatureSelector() {
+        Spinner spinner = findViewById(R.id.spinner);
+        List<String> options = new ArrayList<>();
+        options.add(POSE_DETECTION);
+        options.add(SELFIE_SEGMENTATION);
+        options.add(FACE_DETECTION);
+        options.add(OBJECT_DETECTION);
+        options.add(OBJECT_DETECTION_CUSTOM);
+        options.add(IMAGE_LABELING);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+        spinner.setOnItemSelectedListener(
+                new OnItemSelectedListener() {
+
+                    @Override
+                    public synchronized void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                        // An item was selected. You can retrieve the selected item using
+                        // parent.getItemAtPosition(pos)
+                        selectedMode = parent.getItemAtPosition(pos).toString();
+                        Log.d(TAG, "Selected model: " + selectedMode);
+                        preview.stop();
+                        createCameraSource(selectedMode);
+                        startCameraSource();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // Do nothing.
+                    }
+                });
+    }
+
+    private void populateFaceSwitch() {
+        ToggleButton facingSwitch = findViewById(R.id.facing_switch);
+        facingSwitch.setOnCheckedChangeListener(
+                (buttonView, isChecked) -> {
+                    Log.d(TAG, "Set facing");
+                    if (cameraSource != null) {
+                        if (isChecked) {
+                            cameraSource.setFacing(CameraSource.CAMERA_FACING_FRONT);
+                        } else {
+                            cameraSource.setFacing(CameraSource.CAMERA_FACING_BACK);
+                        }
+                    }
+                    preview.stop();
+                    startCameraSource();
+                }
+        );
     }
 
     private void createCameraSource(String model) {
@@ -186,6 +218,13 @@ public final class LivePreviewActivity extends AppCompatActivity
                                     runClassification,
                                     /* isStreamMode = */ true));
                     break;
+                case SELFIE_SEGMENTATION:
+                    cameraSource.setMachineLearningFrameProcessor(new SegmenterProcessor(this));
+                    break;
+                case FACE_DETECTION:
+                    Log.i(TAG, "Using Face Detector Processor");
+                    cameraSource.setMachineLearningFrameProcessor(new FaceDetectorProcessor(this));
+                    break;
                 case OBJECT_DETECTION:
                     Log.i(TAG, "Using Object Detector Processor");
                     ObjectDetectorOptions objectDetectorOptions =
@@ -204,17 +243,10 @@ public final class LivePreviewActivity extends AppCompatActivity
                     cameraSource.setMachineLearningFrameProcessor(
                             new ObjectDetectorProcessor(this, customObjectDetectorOptions));
                     break;
-                case FACE_DETECTION:
-                    Log.i(TAG, "Using Face Detector Processor");
-                    cameraSource.setMachineLearningFrameProcessor(new FaceDetectorProcessor(this));
-                    break;
                 case IMAGE_LABELING:
                     Log.i(TAG, "Using Image Label Detector Processor");
                     cameraSource.setMachineLearningFrameProcessor(
                             new LabelDetectorProcessor(this, ImageLabelerOptions.DEFAULT_OPTIONS));
-                    break;
-                case SELFIE_SEGMENTATION:
-                    cameraSource.setMachineLearningFrameProcessor(new SegmenterProcessor(this));
                     break;
                 default:
                     Log.e(TAG, "Unknown model: " + model);
@@ -249,31 +281,6 @@ public final class LivePreviewActivity extends AppCompatActivity
                 cameraSource.release();
                 cameraSource = null;
             }
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume");
-        createCameraSource(selectedModel);
-        startCameraSource();
-    }
-
-    /**
-     * Stops the camera.
-     */
-    @Override
-    protected void onPause() {
-        super.onPause();
-        preview.stop();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (cameraSource != null) {
-            cameraSource.release();
         }
     }
 
@@ -321,7 +328,7 @@ public final class LivePreviewActivity extends AppCompatActivity
             int requestCode, String[] permissions, int[] grantResults) {
         Log.i(TAG, "Permission granted!");
         if (allPermissionsGranted()) {
-            createCameraSource(selectedModel);
+            createCameraSource(selectedMode);
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }

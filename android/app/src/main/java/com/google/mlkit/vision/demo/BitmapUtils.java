@@ -93,6 +93,10 @@ public class BitmapUtils {
 
     /**
      * Rotates a bitmap if it is converted from a bytebuffer.
+     * Bitmap bitmap：要旋转的 bitmap 对象。
+     * int rotationDegrees：旋转角度，可以是 0、90、180 或 270 度。
+     * boolean flipX：在 X 轴上翻转图像（如果为 true）。
+     * boolean flipY：在 Y 轴上翻转图像（如果为 true）。
      */
     private static Bitmap rotateBitmap(
             Bitmap bitmap, int rotationDegrees, boolean flipX, boolean flipY) {
