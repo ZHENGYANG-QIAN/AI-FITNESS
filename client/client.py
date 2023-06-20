@@ -927,7 +927,7 @@ def videopointprocess():
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     filehead = file_path1.split('/')[-1]
     # output_path = "Point-out-" + filehead + '.mp4'
-    output_path = "point-out" + filehead
+    output_path = "point-out-" + filehead
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height), isColor=True)
     while video_cap.isOpened() & i == 0:
         success, img = video_cap.read()
