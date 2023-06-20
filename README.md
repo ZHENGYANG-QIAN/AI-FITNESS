@@ -58,6 +58,8 @@ PC端部署使用了PyQt5，它是 Qt 应用程序框架在 Python 中的封装�
 
 应用程序源码见[client](client)。
 
+![image-20230620140634468](README.assets/image-20230620140634468.png)
+
 ### 引用文献
 
 \[1\]:Bazarevsky, Valentin, et al. "Blazepose: On-device real-time body pose tracking." *arXiv preprint arXiv:2006.10204* (2020). 
