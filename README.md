@@ -1,42 +1,23 @@
 # AI-FITNESS
-**Project**: Fitness counter using human key point detection
+**项目简介**: 基于人体关键点检测的健身动作计数应用
 
-**Usage:**
+**克隆项目:**
 
 ```bash
 git clone git@github.com:ZHENGYANG-QIAN/Human-body-key-point-detection.git
 ```
 
-### Human pose estimation
+### 人体关键点预测
 
-This repository is the implementation of the paper [BlazePose: On-device Real-time Body Pose tracking](https://arxiv.org/pdf/2006.10204v1.pdf) [1], which is a lightweight, on-device single person-specific human pose estimation model. The inference pipeline is shown in Figure 1.
+本项目基于谷歌推出的人体姿态估计模型 [BlazePose: On-device Real-time Body Pose tracking](https://arxiv.org/pdf/2006.10204v1.pdf) [1], 它是一个轻量级的设备端单人关键点检测模型。其推理管道和网络结构如下。
 
 ![11b070cb-0ae3-4ba9-9d62-196c207c33ed](README.assets/11b070cb-0ae3-4ba9-9d62-196c207c33ed.png)
 
 ![00c94594-2eba-4522-830a-be0173b0ec63](README.assets/00c94594-2eba-4522-830a-be0173b0ec63.png)
 
-The code is available at: [Human-body-key-point-detection](https://github.com/1zeryu/Human-body-key-point-detection/tree/master/models).
+BlazePose模型的复现工作见[models](models)
 
-### Mediapipe and Installation
-
-In this project, I am calling the already trained BlazePose model from mediapipe for **human keypoint detection**.
-
-You can configure the required environment by:
-
-```python
-pip install mediapipe==0.9.1.0 opencv-python numpy
-```
-
-You can click on the following links for more information:  [Pose-mediapipe](https://google.github.io/mediapipe/solutions/pose) 
-
-You can also quickly learn how to detect key points in the human body by looking at my [tutorial](https://github.com/1zeryu/Human-body-key-point-detection/tree/master/tutorial).
-
-### Movement classification
-For common exercise movements such as squats and push-ups, one up and one down is the completion of one movement, and we need to train a classifier to identify whether the stance is up or down at this point.
-
-A common approach is to use the kNN algorithm. You can click on this URL to read the [relevant code](https://github.com/1zeryu/Human-body-key-point-detection/blob/master/models/SquatCounter.ipynb).
-
-You can add the required toolkit with the following code.
+### requirements
 
 ```python
 pip install opencv-python==4.7.0.72
@@ -48,19 +29,40 @@ pip install pillow==9.4.0
 pip install requests==2.28.2
 ```
 
-### Deploy
+### MediaPipe
 
-I chose to deploy the fitness counter to **Android**,Use Google's Android application template (ML kit):  [Pose Detection  | ML Kit  | Google Developers](https://developers.google.com/ml-kit/vision/pose-detection) 
+MediaPipe 是 Google 推出的一款跨平台、轻量级、开放源代码的多媒体框架，旨在为开发人员和研究人员提供高效、易用、可靠的媒体处理解决方案。本项目借助MediaPipe框架使用训练好的BlazePose模型，来实现人体姿态估计。
 
-You need to modify, debug and generate apk file in professional Android development tool - Android Studio:  [Download Android Studio & App Tools - Android Developers](https://developer.android.com/studio) 
+你可以点击以下链接获取更多信息：  [Pose-mediapipe](https://google.github.io/mediapipe/solutions/pose)
 
-<img src="README.assets\QQ图片20230614220914.jpg" alt="QQ图片20230614220914" style="zoom: 50%;" />
+通过查看我的[tutorial](tutorial)，你可以快速上手人体关键点的检测。 
 
-### Reference
+### 动作姿势分类
+对于类似深蹲和俯卧撑这样的常见运动，一个up和一个down是一个完整的动作，我们需要训练一个分类器来识别这个时刻的姿态是up还是down。
+
+一种常用的方法是使用 kNN 算法。你可以在[SquatCounter](tutorial/SquatCounter.ipynb)中阅读相关代码。
+
+### 部署
+
+#### 1.移动端
+
+移动端部署目前完成了安卓应用的构建。（你需要在专业的 Android 开发工具 - Android Studio 中进行修改、调试和生成 APK 文件：[Download Android Studio & App Tools - Android Developers](https://developer.android.com/studio)）
+
+本项目使用了 Google 的 Android 机器学习应用程序模板（ML Kit）：[Pose Detection | ML Kit | Google Developers](https://developers.google.com/ml-kit/vision/pose-detection)。App源码见[android](android)。
+
+<img src="README.assets/QQ图片20230614220914.jpg" alt="QQ图片20230614220914" style="zoom:50%;" />
+
+#### 2.PC
+
+PC端部署使用了PyQt5，它是 Qt 应用程序框架在 Python 中的封装。因其支持跨平台的特点，可以同时在Linux、Windows、MacOS等多个平台运行。学习使用PyQt5：[PyQt5 · PyPI](https://pypi.org/project/PyQt5/)
+
+应用程序源码见[client](client)。
+
+### 引用文献
 
 \[1\]:Bazarevsky, Valentin, et al. "Blazepose: On-device real-time body pose tracking." *arXiv preprint arXiv:2006.10204* (2020). 
 
-#### Some Useful Technical Links
+#### 参考资料
 
  [基于BlazePose算法的机器人人体姿势识别与模仿)](https://github.com/TYZQ/graduation_project_2022) 
 
