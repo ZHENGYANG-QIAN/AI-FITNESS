@@ -29,7 +29,7 @@ class MyDialog(QDialog):
         self.setFixedSize(600, 400)
 
         label = QLabel('请选择动作类型：', self)
-        label.setPixmap(QPixmap("cxk.jpg"))
+        label.setPixmap(QPixmap("assets/cxk.jpg"))
         label.setScaledContents(True)
         squat_button = QPushButton('深蹲', self)
         squat_button.clicked.connect(self.do_operation1)
@@ -97,7 +97,7 @@ class MyDialog2(QDialog):
         self.setFixedSize(600, 400)
 
         label = QLabel('请选择检测类型：', self)
-        label.setPixmap(QPixmap("cxk.jpg"))
+        label.setPixmap(QPixmap("assets/cxk.jpg"))
         label.setScaledContents(True)
         pic_button = QPushButton('图片', self)
         pic_button.clicked.connect(self.do_operation1)
@@ -331,7 +331,7 @@ class ClientPointProcess():
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         filehead = file_path1.split('/')[-1]
         # output_path = "Point-out-" + filehead + '.mp4'
-        output_path = "point-out-" + filehead
+        output_path = "assets/point-out-" + filehead
         out = cv2.VideoWriter(output_path, fourcc, fps, (width, height), isColor=True)
         while video_cap.isOpened() & i == 0:
             success, img = video_cap.read()
@@ -454,7 +454,7 @@ class ClientVideoNumberProcess():
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         filehead = file_path1.split('/')[-1]
         # output_path = "Count-out-" + filehead + '.mp4'
-        output_path = "count-out-" + filehead
+        output_path = "assets/count-out-" + filehead
         out = cv2.VideoWriter(output_path, fourcc, fps, (new_width, new_height), isColor=True)
         while video_cap.isOpened() & i == 0:
             # get next frame of the video
@@ -560,7 +560,7 @@ class ClientCleanText():
     def CleanText(cls):
         ui.textBrowser.clear()
         ui.labelcamera.setGeometry(QRect(340, 355, 1500, 620))
-        q_pixmap = QPixmap('white.jpg')
+        q_pixmap = QPixmap('assets/white.jpg')
         ui.labelcamera.setPixmap(q_pixmap)
 
 class ClientReadme():
@@ -568,7 +568,7 @@ class ClientReadme():
     @classmethod
     def Readme(cls):
         # 打开matters.txt文件
-        with open("matter.txt", "r", encoding="utf-8") as file:
+        with open("assets/matter.txt", "r", encoding="utf-8") as file:
             result = file.read()
             ui.printstr(result)
 

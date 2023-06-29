@@ -23,7 +23,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label = QtWidgets.QLabel(MainWindow)
         self.label.setGeometry(QtCore.QRect(0, 0, 1920, 1080))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("background.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("assets/background.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.textBrowser = QtWidgets.QTextBrowser(MainWindow)
@@ -35,7 +35,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         self.labelcamera = QtWidgets.QLabel(MainWindow)
         self.labelcamera.setGeometry(QtCore.QRect(340, 355, 1500, 620))
-        self.labelcamera.setPixmap(QtGui.QPixmap("white.jpg"))
+        self.labelcamera.setPixmap(QtGui.QPixmap("assets/white.jpg"))
         self.labelcamera.setScaledContents(True)
         self.labelcamera.setObjectName("camera")
         self.label_title = QtWidgets.QLabel(MainWindow)
